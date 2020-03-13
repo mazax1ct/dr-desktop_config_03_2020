@@ -1,0 +1,101 @@
+.nc-c-list
+  position: relative
+  width: 100%
+
+  &__arrow
+    border: 1px solid rgba(#fff, 0.1)
+    bottom: 0
+    background-color: transparent
+    cursor: pointer
+    height: 70px
+    position: absolute
+    transition: all 0.3s
+    width: 38px
+
+    &--prev
+      left: -48px
+
+    &--next
+      left: auto
+      right: -48px
+
+    &:disabled
+      opacity: 0
+
+    &:not(:disabled)
+      &:hover,
+      &.is-active
+        background-color: rgba(#C4C4C4, 0.1)
+
+        .nc-c-list__arrow-icon
+          fill: #fff
+
+  &__arrow-icon
+    fill: rgba(#fff, 0.2)
+    height: 12px
+    transition: fill 0.3s
+    width: 8px
+
+  &__item-cell
+    margin-top: -1px
+
+    @media(min-width: 992px)
+      display: none
+      margin-top: 0
+
+    &.is-active
+      @media(min-width: 992px)
+        display: block
+
+    &:first-child
+      margin-top: 0
+
+  &__item
+    display: none
+
+    @media(min-width: 992px)
+      display: block !important
+
+    &.is-active
+      display: block
+
+  &__item-title
+    align-items: center
+    background-color: #1D1D1D
+    border-top: 1px solid #888
+    border-bottom: 1px solid #888
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 16px
+    font-weight: 700
+    justify-content: center
+    min-height: 55px
+    margin-bottom: 0
+    position: relative
+
+    @media(min-width: 992px)
+      display: none
+
+  &__item-title-icon
+    fill: #fff
+    height: 16px
+    left: auto
+    position: absolute
+    right: 15px
+    top: 50%
+    transform: translateY(-50%)
+    width: 16px
+
+  &__item-list
+    display: flex
+    margin-left: -6px
+    margin-right: -6px
+
+a.nc-c-list__arrow
+  display: none
+
+  @media(min-width: 992px)
+    align-items: center
+    display: flex
+    justify-content: center

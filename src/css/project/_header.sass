@@ -1,0 +1,177 @@
+.header
+  background-color: #191919
+  border-bottom: 1px solid rgba(#fff, 0.05)
+
+  &__inner
+    align-items: center
+    display: flex
+    min-height: 60px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    padding-left: 75px
+
+  &__logo
+    font-family: $secondary-font
+    font-size: 16px
+    height: 60px
+    margin-top: 0
+    margin-bottom: 0
+    margin-right: auto
+    position: relative
+    z-index: 2
+
+  &__logo-link
+    align-items: center
+    display: flex
+    height: 60px
+
+  &__logo-image
+    margin-right: 7px
+    min-width: 161px
+    width: 161px
+
+  &__compare
+    align-items: center
+    border-right: 1px solid rgba(#fff, 0.05)
+    display: flex
+    font-family: $secondary-font
+    font-size: 13px
+    height: 60px
+    padding-left: 24px
+    padding-right: 24px
+    position: relative
+    text-transform: uppercase
+    text-decoration: none
+    z-index: 2
+
+    &:hover
+      text-decoration: none
+
+      .header__compare-text
+        text-decoration: underline
+
+      .header__compare-icon
+        transform: scale(1.2)
+
+  &__compare-icon
+    fill: #fff
+    height: 15px
+    margin-right: 16px
+    transition: transform 0.3s
+    transform: scale(1)
+    width: 22px
+
+  &__compare-text
+    margin-right: 11px
+    white-space: nowrap
+
+  &__compare-count
+    align-items: center
+    border-radius: 50%
+    background-color: $main-color
+    display: flex
+    height: 26px
+    justify-content: center
+    width: 26px
+
+  &__chat
+    align-items: center
+    border: none
+    border-right: 1px solid rgba(#fff, 0.05)
+    background: none
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-family: $secondary-font
+    font-size: 13px
+    height: 60px
+    justify-content: center
+    padding-left: 24px
+    padding-right: 24px
+    position: relative
+    text-transform: uppercase
+    z-index: 2
+
+    &:hover
+      text-decoration: none
+
+      .header__chat-icon
+        transform: scale(1.2)
+
+  &__chat-icon
+    fill: #fff
+    height: 16px
+    margin-right: 12px
+    transition: transform 0.3s
+    transform: scale(1)
+    width: 16px
+
+  &__personal
+    align-items: center
+    border: none
+    border-right: 1px solid rgba(#fff, 0.05)
+    background: none
+    cursor: pointer
+    display: flex
+    height: 60px
+    justify-content: center
+    min-width: 60px
+    padding: 0
+    position: relative
+    text-transform: uppercase
+    width: 60px
+    z-index: 2
+
+    &:hover
+      text-decoration: none
+
+      .header__personal-icon
+        transform: scale(1.2)
+
+  &__personal-icon
+    fill: #fff
+    height: 20px
+    transition: transform 0.3s
+    transform: scale(1)
+    width: 16px
+
+  &__cart
+    align-items: center
+    background-color: $main-color
+    display: flex
+    height: 60px
+    justify-content: center
+    min-width: 60px
+    position: relative
+    text-decoration: none
+    width: 60px
+    z-index: 2
+
+    &:hover
+      text-decoration: none
+
+      .header__cart-icon
+        transform: scale(1.2)
+
+  &__cart-icon
+    fill: #fff
+    height: 24px
+    transition: transform 0.3s
+    transform: scale(1)
+    width: 24px
+
+  &__cart-count
+    align-items: center
+    background-color: #0D0D0D
+    border-radius: 50%
+    color: #fff
+    display: flex
+    font-size: 10px
+    height: 16px
+    justify-content: center
+    left: 13px
+    position: absolute
+    top: 13px
+    width: 16px
+    z-index: 1

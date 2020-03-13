@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>DIGITAL RAZOR</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/desktop_config_style.css?v1"/>
+</head>
+
+<body class="config-page">
+  <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="compare" viewBox="0 0 22 15">
+      <g>
+        <rect width="12" height="3"/>
+        <rect y="6" width="22" height="3"/>
+        <rect y="12" width="17" height="3"/>
+      </g>
+    </symbol>
+    <symbol id="chat" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.73667V0H12.4762V8.17523H3.06059L0 9.73667ZM16 15.232L12.9269 13.6858L3.59232 13.7029L3.588 9.02342H13.3258V5.48624H16V15.232Z"/>
+    </symbol>
+    <symbol id="personal" viewBox="0 0 16 20">
+      <g>
+        <path d="M3.73563 4.21495C3.73563 6.54285 5.62268 8.4299 7.95058 8.4299C10.2785 8.4299 12.1655 6.54285 12.1655 4.21495C12.1655 1.88705 10.2785 0 7.95058 0C5.62268 0 3.73563 1.88705 3.73563 4.21495Z"/>
+        <path d="M7.83991 9.9148C12.1705 9.91288 15.6816 13.424 15.6797 17.7546V19.5536C15.6797 19.8001 15.4798 20 15.2333 20H0.446569C0.199984 20 0.000135975 19.8001 0.000135975 19.5536V17.7546C-0.0017823 13.424 3.50934 9.91288 7.83991 9.9148V9.9148Z"/>
+      </g>
+    </symbol>
+    <symbol id="cart" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4065 1.40648C13.4065 0.629755 12.7767 0 12 0C11.2233 0 10.5935 0.629755 10.5935 1.40648V5.04801H13.4065V1.40648ZM23.4203 6.2074H0.57971C0.259737 6.20785 0.000452899 6.46713 0 6.78711V10.3446C0.000452899 10.6648 0.259737 10.9241 0.57971 10.9243H23.4203C23.7403 10.9241 23.9995 10.6648 24 10.3446V6.78711C23.9995 6.46713 23.7403 6.20785 23.4203 6.2074ZM5.20646 23.3379C4.00742 23.3426 3.00425 22.4289 2.89759 21.2349L2.04297 12.0838H21.9571L21.1023 21.2349C20.9956 22.4289 19.9925 23.3426 18.7936 23.3379H5.20646ZM16.9655 14.897C16.6455 14.897 16.3858 15.1565 16.3858 15.4767V19.6142C16.3858 19.9341 16.6455 20.1939 16.9655 20.1939C17.2857 20.1939 17.5452 19.9341 17.5452 19.6142V15.4767C17.5452 15.1565 17.2857 14.897 16.9655 14.897ZM11.9999 14.897C11.6797 14.897 11.4202 15.1565 11.4202 15.4767V19.6142C11.4202 19.9341 11.6797 20.1939 11.9999 20.1939C12.3201 20.1939 12.5797 19.9341 12.5797 19.6142V15.4767C12.5797 15.1565 12.3201 14.897 11.9999 14.897ZM7.03436 14.897C6.71416 14.897 6.45465 15.1565 6.45465 15.4767V19.6142C6.45465 19.9341 6.71416 20.1939 7.03436 20.1939C7.35434 20.1939 7.61407 19.9341 7.61407 19.6142V15.4767C7.61407 15.1565 7.35434 14.897 7.03436 14.897Z"/>
+    </symbol>
+    <symbol id="circle-plus" viewBox="0 0 21 21">
+      <g>
+        <circle cx="10.5" cy="10.5" r="10"/>
+        <line x1="6" y1="10.5" x2="15" y2="10.5"/>
+        <line x1="10.5" y1="6" x2="10.5" y2="15"/>
+      </g>
+    </symbol>
+    <symbol id="circle-question" viewBox="0 0 12 12">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C2.68397 0 0 2.68352 0 6C0 9.31603 2.68352 12 6 12C9.31603 12 12 9.31648 12 6C12 2.68397 9.31648 0 6 0ZM6 11.0625C3.2021 11.0625 0.9375 8.79827 0.9375 6C0.9375 3.2021 3.20173 0.9375 6 0.9375C8.7979 0.9375 11.0625 3.20173 11.0625 6C11.0625 8.7979 8.79827 11.0625 6 11.0625ZM6 9.45703C6.3236 9.45703 6.58594 9.1947 6.58594 8.87109C6.58594 8.54749 6.3236 8.28516 6 8.28516C5.6764 8.28516 5.41406 8.54749 5.41406 8.87109C5.41406 9.1947 5.6764 9.45703 6 9.45703ZM4.125 4.88672C4.125 3.85284 4.96613 3.01172 6 3.01172C7.03387 3.01172 7.875 3.85284 7.875 4.88672C7.875 5.7588 7.27655 6.49373 6.46875 6.7024V7.46484C6.46875 7.72373 6.25889 7.93359 6 7.93359C5.74111 7.93359 5.53125 7.72373 5.53125 7.46484V6.29297C5.53125 6.03408 5.74111 5.82422 6 5.82422C6.51694 5.82422 6.9375 5.40366 6.9375 4.88672C6.9375 4.36978 6.51694 3.94922 6 3.94922C5.48306 3.94922 5.0625 4.36978 5.0625 4.88672C5.0625 5.14561 4.85264 5.35547 4.59375 5.35547C4.33486 5.35547 4.125 5.14561 4.125 4.88672Z"/>
+    </symbol>
+    <symbol id="save" viewBox="0 0 20 20">
+      <g>
+        <path d="M5.99999 0H14V6H5.99999V0Z"/>
+        <path d="M2.90001 0H4.00003V8.00001H16V0H20V20H6.35795e-07V2.90001L2.90001 0ZM10 18C12.2 18 14 16.2 14 14C14 11.8 12.2 10 10 10C7.80004 10 6.00004 11.8 6.00004 14C6 16.2 7.79999 18 10 18Z"/>
+        <path d="M9.99975 16C8.89518 16 7.99975 15.1046 7.99975 14C7.99975 12.8954 8.89518 12 9.99975 12C11.1043 12 11.9998 12.8954 11.9998 14C11.9998 15.1046 11.1043 16 9.99975 16Z"/>
+      </g>
+    </symbol>
+    <symbol id="edit" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2792 0.409593C10.0166 0.147316 9.66059 0 9.28942 0C8.91826 0 8.56227 0.147316 8.29965 0.409593L5.46832 3.24058C5.34035 3.37251 5.26941 3.54947 5.27081 3.73327C5.27221 3.91706 5.34585 4.09292 5.47582 4.22288C5.60579 4.35284 5.78166 4.42647 5.96545 4.42786C6.14924 4.42925 6.32621 4.35829 6.45813 4.23032L9.28939 1.3994L9.98158 2.09138L1.43466 10.6449L5.36143 14.5717L14.4049 5.52125C14.5338 5.38779 14.6065 5.20985 14.6079 5.02428C14.6065 4.84078 14.5337 4.66505 14.4049 4.53431C12.8597 2.98907 11.5629 1.69278 10.8263 0.956513L10.2792 0.409593ZM0.0137466 15.1597C-0.00888834 15.2732 -0.00350763 15.3906 0.0294229 15.5016C0.0623535 15.6125 0.121841 15.7138 0.202735 15.7966C0.285192 15.8781 0.386453 15.9379 0.497555 15.9709C0.608656 16.0039 0.726172 16.0089 0.839698 15.9856L4.1435 15.3277L0.671708 11.8559L0.0137466 15.1597ZM13.8099 0.789538L15.2099 2.18946C15.341 2.32161 15.4146 2.50025 15.4146 2.68643C15.4146 2.87261 15.341 3.05124 15.2099 3.1834L14.6289 3.76436L12.235 1.3705L12.816 0.789538C12.9482 0.658399 13.1268 0.584811 13.313 0.584811C13.4992 0.584811 13.6778 0.658399 13.8099 0.789538Z"/>
+    </symbol>
+    <symbol id="slider_arrow_left" viewBox="0 0 8 12">
+      <path d="M8 12V0L0 5.85366L8 12Z"/>
+    </symbol>
+    <symbol id="slider_arrow_right" viewBox="0 0 8 12">
+      <path d="M0 12V0L8 5.85366L0 12Z"/>
+    </symbol>
+  </svg>
+  <div class="config-page__inner">
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a class="header__logo-link" href="#">
+            <img class="header__logo-image" src="images/logo.png" alt="Назад">
+            Performance
+          </a>
+        </h1>
+    
+        <a class="header__compare" href="#">
+          <svg class="header__compare-icon" aria-hidden="true">
+            <use xlink:href="#compare"/>
+          </svg>
+          <span class="header__compare-text">В сравнении</span>
+          <span class="header__compare-count">2</span>
+        </a>
+    
+        <button class="header__chat" type="button">
+          <svg class="header__chat-icon" aria-hidden="true">
+            <use xlink:href="#chat"/>
+          </svg>
+          Чат
+        </button>
+    
+        <button class="js-personal-opener header__personal" type="button" title="Личный кабинет">
+          <svg class="header__personal-icon" aria-hidden="true">
+            <use xlink:href="#personal"/>
+          </svg>
+        </button>
+    
+        <div class="personal-menu">
+          <ul class="personal-menu__list">
+            <li class="personal-menu__title">ЛИЧНЫЙ КАБИНЕТ</li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">Сохраненные конфигурации</a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">Текущие заказы</a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">Корзина</a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">Личные данные</a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">История заказов</a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">Выход</a>
+            </li>
+          </ul>
+        </div>
+    
+        <a class="header__cart" href="#" title="Корзина">
+          <span class="header__cart-count">0</span>
+          <svg class="header__cart-icon" aria-hidden="true">
+            <use xlink:href="#cart"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <form class="nc custom-scroll" action="">
+      <div class="nc__section is-active">
+        <div class="nc__inner nc__inner--config is-active" data-section="1">
+          <div class="nc__inner-top">
+            <div class="nc__picture-block">
+              <!--<div class="advisor">
+                <button class="advisor__button" type="button" title="Получите совет"><svg class="advisor__icon" aria-hidden="true">
+                    <use xlink:href="#info" /></svg></button>
+                <div class="advise">
+                  <button class="advise__close" type="button" title="Закрыть"><svg class="advise__close-icon" aria-hidden="true">
+                      <use xlink:href="#times-circle" /></svg></button>
+                  <div class="advise__image"><img src="images/content/img_48.png" alt="alt"></div>
+                  <div class="advise__text-block">
+                    <p class="advise__title">Совет!</p>
+                    <p class="advise__text">Бла-бла-бла... Купи нормальный комп!</p>
+                    <p class="advise__button-block"><a class="button button--red" href="#">Я кнопка</a></p>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+            <div class="nc__performance-block">
+              <div class="nc__performance-tabs">
+                <ul class="js-performance-type nc__performance-tabs-list nc__performance-tabs-list--big">
+                  <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link is-active" data-target="games" href="#">Игры</a></li>
+                  <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link" data-target="content" href="#">Создание контента</a></li>
+                </ul>
+                <div class="nc__performance-tabs-resolution">
+                  <p class="nc__performance-tabs-title">Разрешение</p>
+                  <ul class="nc__performance-tabs-list nc__performance-tabs-list--small">
+                    <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link is-active" href="#">FullHD</a></li>
+                    <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link" href="#">2K</a></li>
+                    <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link" href="#">4K</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="nc__performance-bars">
+                <div class="nc__performance-bars-tab is-active" data-target="games">
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">GTA5 (FullHD ULTRA)</div>
+                    <div id="plus" class="perf-bar__bar" style="width: 30%;"></div>
+                    <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                    <div class="perf-bar__value">
+                      <span>43</span> FPS
+                      <div class="perf-bar__value-note">больше-лучше</div>
+                    </div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Battlefield 1 (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 76%;"></div>
+                    <div class="perf-bar__value">
+                      <span>70</span> FPS
+                      <div class="perf-bar__value-note">больше-лучше</div>
+                    </div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Overwatch (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 38%;"></div>
+                    <div class="perf-bar__value">
+                      <span>72</span> FPS
+                      <div class="perf-bar__value-note">больше-лучше</div>
+                    </div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">CS:GO (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 24%;"></div>
+                    <div class="perf-bar__value">
+                      <span>110</span> FPS
+                      <div class="perf-bar__value-note">больше-лучше</div>
+                    </div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">PUBG (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 30%;"></div>
+                    <div class="perf-bar__value">
+                      <span>38</span> FPS
+                      <div class="perf-bar__value-note">больше-лучше</div>
+                    </div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">GTA5 (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 30%;"></div>
+                    <div class="perf-bar__value">
+                      <span>43</span> FPS
+                      <div class="perf-bar__value-note">больше-лучше</div>
+                    </div>
+                  </div>
+                  <div class="nc__performance-bars-hidden">
+                    <div class="perf-bar">
+                      <div class="perf-bar__title">Battlefield 1 (FullHD ULTRA)</div>
+                      <div class="perf-bar__bar" style="width: 36%;"></div>
+                      <div class="perf-bar__value">
+                        <span>70</span> FPS
+                        <div class="perf-bar__value-note">больше-лучше</div>
+                      </div>
+                    </div>
+                    <div class="perf-bar">
+                      <div class="perf-bar__title">Overwatch (FullHD ULTRA)</div>
+                      <div class="perf-bar__bar" style="width: 38%;"></div>
+                      <div class="perf-bar__value">
+                        <span>72</span> FPS
+                        <div class="perf-bar__value-note">больше-лучше</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nc__performance-bars-tab" data-target="content">
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Рендеринг</div>
+                    <div class="perf-bar__bar" style="width: 46%;"></div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Обработка видео H264</div>
+                    <div class="perf-bar__bar" style="width: 35%;"></div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Многозадачность</div>
+                    <div class="perf-bar__bar" style="width: 60%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nc__list-block">
+            <div class="nc-c-list">
+              <button class="nc-c-list__arrow nc-c-list__arrow--prev heartBeat" type="button" title="Назад" disabled><svg class="nc-c-list__arrow-icon" aria-hidden="true">
+                  <use xlink:href="#slider_arrow_left" /></svg></button>
+              <div class="nc-c-list__inner">
+                <div class="nc-c-list__item-cell is-active">
+                  <div class="nc-c-list__item is-active" data-section="1-1">
+                    <div class="nc-c-list__item-list">
+                      <div class="nc-c">
+                        <div class="nc-c__title-block">
+                          <p class="nc-c__title"><span class="small">CPU:</span> <span class="big">Процессор:</span></p>
+                        </div>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_1.png" alt=""></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">i7 8086K</p>
+                            <p class="nc-c__block-feature">Intel Core<br> 6-ти ядерный</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--double">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Процессор</p>
+                          <div class="nc-c__list-inner">
+                            <div class="nc-c__list-block">
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="id_97_365708">
+                                  <input data-findmother="INTEL" data-graph="691585=317;691588=1403;691589=203;691590=1.10;691591=171;691592=82;691593=2875" data-name="6-ядерный Intel Core i7-8700 3.20 GHz" data-code="corei7" data-idprop="97"
+                                    data-solution="" data-price="30304.66016" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_97_365708" type="radio" name="v_97" value="365708">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image">
+                                      <img data-src-big="" src="images/content/img_1.png" alt="i7 8700">
+                                    </div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">i7 8700</div>
+                                      <div class="nc-item__feature">Intel Core<br> 6-ти ядерный</div>
+                                    </div>
+                                    <div class="nc-item__prop">3200MHz <span class="nc-item__prop-feature">доступен разгон</span></div>
+                                  </div>
+                                  <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_97" value="1">
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="nci-info__date">До конца акции:<br> <b class="blue">5 дней 16ч. 34м.</b></p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="id_97_522608">
+                                  <input data-findmother="INTEL" data-graph="691585=454;691588=1029;691589=186;691590=1.44;691591=142;691592=63;691593=2881" data-name="6-ядерный Intel Core i5-8600 3.10 GHz" data-code="corei5_8600" data-idprop="97"
+                                    data-solution="" data-price="24707.78" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_97_522608" type="radio" name="v_97" value="522608">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image">
+                                      <img data-src-big="" src="images/content/img_1.png" alt="i5 8600">
+                                    </div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">i5 8600</div>
+                                      <div class="nc-item__feature">Intel Core<br> 6-ти ядерный</div>
+                                    </div>
+                                    <div class="nc-item__prop">3100MHz <span class="nc-item__prop-feature">доступен разгон</span></div>
+                                  </div>
+                                  <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_97" value="1">
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Подарок"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#gift"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="nci-info__date">До конца акции:<br> <b class="red">1 день 1ч. 34м.</b></p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="id_97_365784">
+                                  <input data-findmother="INTEL" data-graph="691585=494;691588=953;691589=171;691590=02.09;691591=130;691592=58;691593=3100" data-name="6-ядерный Intel Core i5-8400 2.80 GHz" data-code="corei5" data-idprop="97"
+                                    data-solution="" data-price="21930.14" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_97_365784" type="radio" name="v_97" value="365784">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image">
+                                      <img data-src-big="" src="images/content/img_1.png" alt="i5 8400">
+                                    </div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">i5 8400</div>
+                                      <div class="nc-item__feature">Intel Core<br> 6-ти ядерный</div>
+                                    </div>
+                                    <div class="nc-item__prop">2800MHz <span class="nc-item__prop-feature">&nbsp;</span></div>
+                                  </div>
+                                  <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_97" value="1">
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="id_97_365800">
+                                  <input data-findmother="INTEL" data-graph="691585=875;691588=616;691589=154;691590=3.20;691591=71;691592=36;691593=4072" data-name="4-ядерный Intel Core i3-8100 3.60 GHz" data-code="corei3" data-idprop="97"
+                                    data-solution="" data-price="11206.2852" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_97_365800" type="radio" name="v_97" value="365800" checked="">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image">
+                                      <img data-src-big="" src="images/content/img_1.png" alt="i3 8100">
+                                    </div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">i3 8100</div>
+                                      <div class="nc-item__feature">Intel Core<br> 4-ех ядерный</div>
+                                    </div>
+                                    <div class="nc-item__prop">3600MHz <span class="nc-item__prop-feature">&nbsp;</span></div>
+                                  </div>
+                                  <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_97" value="1">
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nc-c__list-block">
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="id_97_536751">
+                                  <input data-findmother="AMD" data-graph="691585=309;691588=1538;691589=168;691590=01.10;691591=142;691592=84;691593=2851" data-name="8-ядерный AMD Ryzen 7 2700 3.20 GHz" data-code="amd-r5-2700" data-idprop="97"
+                                    data-solution="" data-price="22780.56" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_97_536751" type="radio" name="v_97" value="536751">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image">
+                                      <img data-src-big="" src="images/content/img_1.png" alt="R7 2700">
+                                    </div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">R7 2700</div>
+                                      <div class="nc-item__feature">AMD Ryzen <br> 8-ми ядерный</div>
+                                    </div>
+                                    <div class="nc-item__prop">3200MHz <span class="nc-item__prop-feature">&nbsp;</span></div>
+                                  </div>
+                                  <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_97" value="1">
+                                </label>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="id_97_536760">
+                                  <input data-findmother="AMD" data-graph="691585=400;691588=1280;691589=160;691590=01.32;691591=115;691592=72;691593=3425" data-name="6-ядерный AMD Ryzen 5 2600 3.40 GHz" data-code="amd-r5-2600" data-idprop="97"
+                                    data-solution="" data-price="14807.35584" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_97_536760" type="radio" name="v_97" value="536760">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image">
+                                      <img data-src-big="" src="images/content/img_1.png" alt="R5 2600">
+                                    </div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">R5 2600</div>
+                                      <div class="nc-item__feature">AMD Ryzen<br> 6-ти ядерный</div>
+                                    </div>
+                                    <div class="nc-item__prop">3400MHz <span class="nc-item__prop-feature">&nbsp;</span></div>
+                                  </div>
+                                  <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_97" value="1">
+                                </label>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="id_97_658927">
+                                  <input data-findmother="AMD" data-graph="691585=572;691588=808;691589=155;691590=02.32;691591=80;691592=44;691593=3882" data-name="4-ядерный AMD Ryzen 5 2400G 3.6GHz" data-code="amd-r5-2400g" data-idprop="97"
+                                    data-solution="" data-price="11760.00" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_97_658927" type="radio" name="v_97" value="658927">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image">
+                                      <img data-src-big="" src="images/content/img_1.png" alt="R5 2400G">
+                                    </div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">R5 2400G</div>
+                                      <div class="nc-item__feature">AMD Ryzen <br> 4-х ядерный</div>
+                                    </div>
+                                    <div class="nc-item__prop">3600MHz <span class="nc-item__prop-feature">доступен разгон</span></div>
+                                  </div>
+                                  <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_97" value="1">
+                                </label>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="id_97_658924">
+                                  <input data-findmother="AMD" data-graph="691585=869;691588=557;691589=136;691590=03.25;691591=67;691592=32;691593=4759" data-name="4-ядерный AMD Ryzen 3 2200G 3.5GHz" data-code="amd-r3-2200g" data-idprop="97"
+                                    data-solution="" data-price="7695.5792" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_97_658924" type="radio" name="v_97" value="658924">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image">
+                                      <img data-src-big="" src="images/content/img_1.png" alt="R3 2200G">
+                                    </div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">R3 2200G</div>
+                                      <div class="nc-item__feature">AMD Ryzen <br> 4-х ядерный</div>
+                                    </div>
+                                    <div class="nc-item__prop">3500MHz <span class="nc-item__prop-feature">доступен разгон</span></div>
+                                  </div>
+                                  <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_97" value="1">
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle"></use>
+                            </svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <div class="nc-c__title-block">
+                          <p class="nc-c__title"><span class="small">RAM:</span> <span class="big">Оперативная память:</span></p>
+                          <div class="nc-c__multiplier multiplier">
+                            <button class="multiplier__button" type="button">-<span></span></button>
+                            <span class="multiplier__text">1</span>
+                            <button class="multiplier__button" type="button">+<span></span></button>
+                          </div>
+                        </div>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_4.png" alt=""></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">16GB</p>
+                            <p class="nc-c__block-feature">2x8Gb<br>DDR4</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list">
+                          <div class="nc-c__list-title-block">
+                            <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Оперативная память</p>
+                            <div class="nc-c__list-multiplier multiplier">
+                              <button class="multiplier__button" type="button">-</button>
+                              <span class="multiplier__text">1</span>
+                              <button class="multiplier__button" type="button">+</button>
+                            </div>
+                          </div>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="1_">
+                                <input class="nc-item__radio" id="1_" type="radio" name="ram" value="1_" checked>
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image"><img src="images/content/img_4.png" alt="16GB"></div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">16GB</div>
+                                    <div class="nc-item__feature">3200Mhz DDR4</div>
+                                  </div>
+                                  <div class="nc-item__prop">4,20 Ghz</div>
+                                </div>
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="2_">
+                                <input class="nc-item__radio" id="2_" type="radio" name="ram" value="2_" checked>
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image"><img src="images/content/img_4.png" alt="32GB"></div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">32GB</div>
+                                    <div class="nc-item__feature">3200Mhz DDR4</div>
+                                  </div>
+                                  <div class="nc-item__prop">4,20 Ghz</div>
+                                </div>
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                                <use xlink:href="#times-circle" /></svg></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <div class="nc-c__title-block">
+                          <p class="nc-c__title"><span class="small">Видео:</span> <span class="big">Видеокарта:</span></p>
+                          <div class="nc-c__multiplier multiplier">
+                            <button class="multiplier__button" type="button">-<span></span></button>
+                            <span class="multiplier__text">Crossfire</span>
+                            <button class="multiplier__button" type="button">+<span></span></button>
+                          </div>
+                        </div>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_2.png" alt="1060 6Gb"></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">GTX 2070</p>
+                            <p class="nc-c__block-feature">NVIDIA<br>GeForce <b style="color:green">Super</b></p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--double">
+                          <div class="nc-c__list-title-block">
+                            <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Видеокарта</p>
+                            <div class="nc-c__list-multiplier multiplier">
+                              <button class="multiplier__button" type="button">-</button>
+                              <span class="multiplier__text">Crossfire</span>
+                              <button class="multiplier__button" type="button">+</button>
+                            </div>
+                          </div>
+                          <div class="nc-c__list-inner">
+                            <div class="nc-c__list-block">
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="1__">
+                                  <input class="nc-item__radio" id="1__" type="radio" name="video" value="1__" checked>
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image"><img src="images/content/img_2.png" alt="1060 6Gb"></div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">GTX 1060</div>
+                                      <div class="nc-item__feature">NVidia<br> GeForce</div>
+                                    </div>
+                                    <div class="nc-item__prop">11GB</div>
+                                  </div>
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="2__">
+                                  <input class="nc-item__radio" id="2__" type="radio" name="video" value="2__">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image"><img src="images/content/img_2.png" alt="1070 6Gb"></div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">GTX 1070</div>
+                                      <div class="nc-item__feature">NVidia<br> GeForce</div>
+                                    </div>
+                                    <div class="nc-item__prop">8GB</div>
+                                  </div>
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="3__">
+                                  <input class="nc-item__radio" id="3__" type="radio" name="video" value="3__">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image"><img src="images/content/img_2.png" alt="1070 6Gb"></div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">RTX 2070</div>
+                                      <div class="nc-item__feature">NVidia<br> GeForce <b style="color:green">Super</b></div>
+                                    </div>
+                                    <div class="nc-item__prop">8GB</div>
+                                  </div>
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="4__">
+                                  <input class="nc-item__radio" id="4__" type="radio" name="video" value="4__">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image"><img src="images/content/img_2.png" alt="1070 6Gb"></div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">RTX 2080</div>
+                                      <div class="nc-item__feature">NVidia<br> GeForce</div>
+                                    </div>
+                                    <div class="nc-item__prop">8GB</div>
+                                  </div>
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nc-c__list-block">
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="91__">
+                                  <input class="nc-item__radio" id="91__" type="radio" name="video" value="91__">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image"><img src="images/content/img_2.png" alt="RX 560"></div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">RX 560</div>
+                                      <div class="nc-item__feature">ASUS<br> DUAL</div>
+                                    </div>
+                                    <div class="nc-item__prop">8GB</div>
+                                  </div>
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="92__">
+                                  <input class="nc-item__radio" id="92__" type="radio" name="video" value="92__">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image"><img src="images/content/img_2.png" alt="RX 580"></div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">RX 580</div>
+                                      <div class="nc-item__feature">ASUS<br> DUAL</div>
+                                    </div>
+                                    <div class="nc-item__prop">8GB</div>
+                                  </div>
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--<div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="93__">
+                                  <input class="nc-item__radio" id="93__" type="radio" name="video" value="93__">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image"><img src="images/content/img_2.png" alt="RX 580"></div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">RX 580</div>
+                                      <div class="nc-item__feature">ASUS<br> AREZ T</div>
+                                    </div>
+                                    <div class="nc-item__prop">8GB</div>
+                                  </div>
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <label class="nc-item" for="94__">
+                                  <input class="nc-item__radio" id="94__" type="radio" name="video" value="94__">
+                                  <div class="nc-item__inner">
+                                    <div class="nc-item__image"><img src="images/content/img_2.png" alt="RX 580"></div>
+                                    <div class="nc-item__title-block">
+                                      <div class="nc-item__title">RX 580</div>
+                                      <div class="nc-item__feature">ASUS<br> AREZ O</div>
+                                    </div>
+                                    <div class="nc-item__prop">8GB</div>
+                                  </div>
+                                </label>
+                                <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                    <use xlink:href="#info"></use>
+                                  </svg></a>
+                                <div class="nci-info">
+                                  <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                      <use xlink:href="#times-circle"></use>
+                                    </svg></button>
+                                  <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                  <div class="nci-info__description">
+                                    <p class="nci-info__title">Card title</p>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a class="button button--red" href="#">Кнопка</a>
+                                  </div>
+                                </div>
+                              </div>-->
+                              <div class="nci-holder nci-holder--with_info">
+                                <div class="nc-item nc-item--empty"></div>
+                              </div>
+                              <div class="nci-holder nci-holder--with_info">
+                                <div class="nc-item nc-item--empty"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <div class="nc-c__title-block">
+                          <p class="nc-c__title">Кулер:</p>
+                        </div>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon">
+                            <img style="" src="images/content/img_5.png">
+                          </div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">Air</p>
+                            <p class="nc-c__block-feature">система<br> охлаждения</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Кулер</p>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_96_582641">
+                                <input data-graph="" data-name="Cooler Master MasterAir MA610P RGB" data-code="cooling_smart2_rgb" data-idprop="96" data-solution="" data-price="5232.384" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_96_582641"
+                                  type="radio" name="v_96" value="582641" checked="">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_5.png" alt="Воздушная">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">Air</div>
+                                    <div class="nc-item__feature">система охлаждения<br>с RGB подсветкой</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_96" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_96_126547">
+                                <input data-graph="" data-name="Воздушная система охлаждения" data-code="cooling_smart2" data-idprop="96" data-solution="" data-price="12327.60" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_96_126547"
+                                  type="radio" name="v_96" value="126547">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_5.png" alt="Воздушная">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">Hydro</div>
+                                    <div class="nc-item__feature">система<br> охлаждения</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_96" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть">
+                            <svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <div class="nc-c__title-block">
+                          <p class="nc-c__title"><span class="small">SSD M.2:</span> <span class="big">SSD накопитель - M.2:</span></p>
+                          <div class="nc-c__multiplier multiplier">
+                            <button class="multiplier__button" type="button">-<span></span></button>
+                            <span class="multiplier__text">1</span>
+                            <button class="multiplier__button" type="button">+<span></span></button>
+                          </div>
+                        </div>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img style="" src="images/content/img_52.png"></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">240Gb</p>
+                            <p class="nc-c__block-feature">SSD sata</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list">
+                          <div class="nc-c__list-title-block">
+                            <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад">SSD накопитель - M.2</p>
+                            <div class="nc-c__list-multiplier multiplier">
+                              <button class="multiplier__button" type="button">-</button>
+                              <span class="multiplier__text">1</span>
+                              <button class="multiplier__button" type="button">+</button>
+                            </div>
+                          </div>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="1___">
+                                <input class="nc-item__radio" id="1___" type="radio" name="ssd" value="1___" checked>
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image"><img src="images/icons/disk.png" alt="240Gb"></div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">240Gb</div>
+                                    <div class="nc-item__feature">SSD sata</div>
+                                  </div>
+                                </div>
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <div class="nc-c__title-block">
+                          <p class="nc-c__title"><span class="small">SSD SATA:</span> <span class="big">SSD накопитель - SATA:</span></p>
+                          <div class="nc-c__multiplier multiplier">
+                            <button class="multiplier__button" type="button">-<span></span></button>
+                            <span class="multiplier__text">1</span>
+                            <button class="multiplier__button" type="button">+<span></span></button>
+                          </div>
+                        </div>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon">
+                            <img style="" src="images/content/img_52.png">
+                          </div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">Нет</p>
+                            <p class="nc-c__block-feature">SSD накопитель</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list">
+                          <div class="nc-c__list-title-block">
+                            <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад">SSD накопитель - SATA</p>
+                            <div class="nc-c__list-multiplier multiplier">
+                              <button class="multiplier__button" type="button">-</button>
+                              <span class="multiplier__text">1</span>
+                              <button class="multiplier__button" type="button">+</button>
+                            </div>
+                          </div>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder">
+                              <label class="nc-item" for="id_104_614322">
+                                <input data-graph="" data-name="Не выбрано" data-code="ssd-fix-1" data-idprop="104" data-solution="" data-price="0" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_104_614322" type="radio" name="v_104" value="614322">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_52.png" alt="Не выбран">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">Нет</div>
+                                    <div class="nc-item__feature">ускоряет<br>работу</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_104" value="1">
+                              </label>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_104_592964">
+                                <input data-graph="" data-name="SSD 250GB" data-code="ssd-240" data-idprop="104" data-solution="" data-price="4913.28" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_104_592964" type="radio" name="v_104"
+                                  value="592964" checked="">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_52.png" alt="250GB">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">250GB</div>
+                                    <div class="nc-item__feature">SSD накопитель</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_104" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_104_592965">
+                                <input data-graph="" data-name="SSD 500GB" data-code="ssd-500" data-idprop="104" data-solution="" data-price="8400.00" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_104_592965" type="radio" name="v_104"
+                                  value="592965">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_52.png" alt="500GB">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">500GB</div>
+                                    <div class="nc-item__feature">SSD накопитель</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_104" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_104_592968">
+                                <input data-graph="" data-name="SSD 1TB" data-code="" data-idprop="104" data-solution="" data-price="16200.00" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_104_592968" type="radio" name="v_104" value="592968">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_52.png" alt="1TB">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">1TB</div>
+                                    <div class="nc-item__feature">SSD накопитель</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_104" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_104_614322">
+                                <input data-graph="" data-name="Не выбрано" data-code="ssd-fix-1" data-idprop="104" data-solution="" data-price="0" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_104_614322" type="radio" name="v_104" value="614322">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_52.png" alt="Не выбран">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">Нет</div>
+                                    <div class="nc-item__feature">ускоряет<br>работу</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_104" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_104_592964">
+                                <input data-graph="" data-name="SSD 250GB" data-code="ssd-240" data-idprop="104" data-solution="" data-price="4913.28" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_104_592964" type="radio" name="v_104"
+                                  value="592964" checked="">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_52.png" alt="250GB">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">250GB</div>
+                                    <div class="nc-item__feature">SSD накопитель</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_104" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_104_592965">
+                                <input data-graph="" data-name="SSD 500GB" data-code="ssd-500" data-idprop="104" data-solution="" data-price="8400.00" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_104_592965" type="radio" name="v_104"
+                                  value="592965">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_52.png" alt="500GB">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">500GB</div>
+                                    <div class="nc-item__feature">SSD накопитель</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_104" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="id_104_592968">
+                                <input data-graph="" data-name="SSD 1TB" data-code="" data-idprop="104" data-solution="" data-price="16200.00" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_104_592968" type="radio" name="v_104" value="592968">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_52.png" alt="1TB">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">1TB</div>
+                                    <div class="nc-item__feature">SSD накопитель</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_104" value="1">
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть">
+                            <svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nc-c-list__item-cell">
+                  <div class="nc-c-list__item" data-section="1-2">
+                    <div class="nc-c-list__item-list">
+                      <div class="nc-c">
+                        <div class="nc-c__title-block">
+                          <p class="nc-c__title"><span class="small">HDD:</span> <span class="big">HDD накопитель:</span></p>
+                          <div class="nc-c__multiplier multiplier">
+                            <button class="multiplier__button" type="button">-<span></span></button>
+                            <span class="multiplier__text">1</span>
+                            <button class="multiplier__button" type="button">+<span></span></button>
+                          </div>
+                        </div>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/hdd.png" alt=""></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">2Tb</p>
+                            <p class="nc-c__block-feature">7200 rpm</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list">
+                          <div class="nc-c__list-title-block">
+                            <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад">HDD накопитель</p>
+                            <div class="nc-c__list-multiplier multiplier">
+                              <button class="multiplier__button" type="button">-</button>
+                              <span class="multiplier__text">1</span>
+                              <button class="multiplier__button" type="button">+</button>
+                            </div>
+                          </div>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder nci-holder--with_info">
+                              <label class="nc-item" for="1-">
+                                <input class="nc-item__radio" id="1-" type="radio" name="hdd" value="1-" checked>
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image"><img src="images/icons/disk.png" alt="2Tb"></div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">2Tb</div>
+                                    <div class="nc-item__feature">7200 rpm</div>
+                                  </div>
+                                </div>
+                              </label>
+                              <a class="js-nci-info-opener nci-button" href="#" title="Информация"><svg class="nci-button__icon" aria-hidden="true">
+                                  <use xlink:href="#info"></use>
+                                </svg></a>
+                              <div class="nci-info">
+                                <button class="js-nci-info-closer nci-info__close" type="button" title="Закрыть"><svg class="nci-info__close-icon" aria-hidden="true">
+                                    <use xlink:href="#times-circle"></use>
+                                  </svg></button>
+                                <div class="nci-info__image"><img src="images/content/cerberus-banner.png" alt="info"></div>
+                                <div class="nci-info__description">
+                                  <p class="nci-info__title">Card title</p>
+                                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a class="button button--red" href="#">Кнопка</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Корпус:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_48.png" alt=""></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title nc-c__block-title--no_feature">CM MasterBox MB500</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--tile nc-c__list--tile_3">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Корпус</p>
+                          <div class="nc-c__list-inner">
+                            <label class="nc-item2" for="1--">
+                              <input class="nc-item2__radio" id="1--" type="radio" name="body" value="1--" checked>
+                              <div class="nc-item2__image"><img src="images/content/img_48.png" alt="K500L"></div>
+                              <div class="nc-item2__title">K500L</div>
+                              <div class="nc-item2__feature">MasterBox</div>
+                            </label>
+                            <label class="nc-item2" for="2--">
+                              <input class="nc-item2__radio" id="2--" type="radio" name="body" value="2--">
+                              <div class="nc-item2__image"><img src="images/content/img_48.png" alt="K500L"></div>
+                              <div class="nc-item2__title">TD500L</div>
+                              <div class="nc-item2__feature">MasterBox</div>
+                            </label>
+                            <label class="nc-item2" for="3--">
+                              <input class="nc-item2__radio" id="3--" type="radio" name="body" value="3--">
+                              <div class="nc-item2__image"><img src="images/content/img_48.png" alt="K500L"></div>
+                              <div class="nc-item2__title">MB520 RGB</div>
+                              <div class="nc-item2__feature">MasterBox</div>
+                            </label>
+                            <label class="nc-item2" for="4--">
+                              <input class="nc-item2__radio" id="4--" type="radio" name="body" value="4--">
+                              <div class="nc-item2__image"><img src="images/content/img_48.png" alt="K500L"></div>
+                              <div class="nc-item2__title">CM MasterBox MB500</div>
+                              <div class="nc-item2__feature">MasterBox</div>
+                            </label>
+                            <label class="nc-item2" for="5--">
+                              <input class="nc-item2__radio" id="5--" type="radio" name="body" value="5--">
+                              <div class="nc-item2__image"><img src="images/content/img_48.png" alt="K500L"></div>
+                              <div class="nc-item2__title">CM MasterBox MB500</div>
+                              <div class="nc-item2__feature">MasterBox</div>
+                            </label>
+                            <div class="nc-item2 nc-item2--empty"></div>
+                            <!--<label class="nc-item2" for="6--">
+                              <input class="nc-item2__radio" id="6--" type="radio" name="body" value="6--">
+                              <div class="nc-item2__image"><img src="images/content/img_48.png" alt="K500L"></div>
+                              <div class="nc-item2__title">CM MasterBox MB500</div>
+                              <div class="nc-item2__feature">MasterBox</div>
+                            </label>
+                            <label class="nc-item2" for="7--">
+                              <input class="nc-item2__radio" id="7--" type="radio" name="body" value="7--">
+                              <div class="nc-item2__image"><img src="images/content/img_48.png" alt="K500L"></div>
+                              <div class="nc-item2__title">CM MasterBox MB500</div>
+                              <div class="nc-item2__feature">MasterBox</div>
+                            </label>
+                            <label class="nc-item2" for="8--">
+                              <input class="nc-item2__radio" id="8--" type="radio" name="body" value="8--">
+                              <div class="nc-item2__image"><img src="images/content/img_48.png" alt="K500L"></div>
+                              <div class="nc-item2__title">CM MasterBox MB500</div>
+                              <div class="nc-item2__feature">MasterBox</div>-->
+                            </label>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Операционная система:</p>
+                        <div class="js-nc-c-block nc-c__block">
+                          <p class="nc-c__block-title">WIN 10</p>
+                          <p class="nc-c__block-feature">Home X64</p>
+                        </div>
+                        <div class="nc-c__list">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Операционная система</p>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder">
+                              <label class="nc-item" for="1---">
+                                <input class="nc-item__radio" id="1---" type="radio" name="soft" value="1---" checked>
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image"><img src="images/icons/soft.png" alt="WIN 10"></div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">WIN 10</div>
+                                    <div class="nc-item__feature">Home X64</div>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="nci-holder">
+                              <label class="nc-item" for="2---">
+                                <input class="nc-item__radio" id="2---" type="radio" name="soft" value="2---" checked>
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image"><img src="images/icons/soft.png" alt="WIN 10"></div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">WIN 10</div>
+                                    <div class="nc-item__feature">Professional X64</div>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">WIFI/BT:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon">
+                            <img style="" src="images/content/img_53.png">
+                          </div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">Без Wi-Fi</p>
+                            <p class="nc-c__block-feature">интернет<br>по проводу</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> WIFI/BT</p>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder">
+                              <label class="nc-item" for="id_117_2546">
+                                <input data-graph="" data-name="Нет" data-code="" data-idprop="117" data-solution="" data-price="0" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_117_2546" type="radio" name="v_117" value="2546" checked="">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_53.png" alt="Без Wi-Fi">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">Без Wi-Fi</div>
+                                    <div class="nc-item__feature">интернет<br>по проводу</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_117" value="1">
+                              </label>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть">
+                            <svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Гарантия:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon">
+                            <img style="" src="images/content/img_50.png">
+                          </div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">36 мес.</p>
+                            <p class="nc-c__block-feature">стандартная<br> гарантия</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Гарантия</p>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder">
+                              <label class="nc-item" for="id_1105_7776">
+                                <input data-graph="" data-name="Гарантия 36 месяцев" data-code="" data-idprop="1105" data-solution="" data-price="0" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_1105_7776" type="radio" name="v_1105"
+                                  value="7776" checked="">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_50.png" alt="36 мес.">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">36 мес.</div>
+                                    <div class="nc-item__feature">стандартная<br> гарантия</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_1105" value="1">
+                              </label>
+                            </div>
+                            <div class="nci-holder">
+                              <label class="nc-item" for="id_1105_91267">
+                                <input data-graph="" data-name="Гарантии 36 месяцев +" data-code="" data-idprop="1105" data-solution="" data-price="9000.00" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_1105_91267" type="radio" name="v_1105"
+                                  value="91267">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_50.png" alt="36 мес.">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">36 мес.</div>
+                                    <div class="nc-item__feature">расширенная <br> гарантия</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_1105" value="1">
+                              </label>
+                            </div>
+                            <div class="nci-holder">
+                              <label class="nc-item" for="id_1105_91268">
+                                <input data-graph="" data-name="Гарантии 36 месяцев MAX" data-code="" data-idprop="1105" data-solution="" data-price="13000.00" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_1105_91268" type="radio" name="v_1105"
+                                  value="91268">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_50.png" alt="36 мес.">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">36 мес.</div>
+                                    <div class="nc-item__feature">максимальная<br> гарантия</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_1105" value="1">
+                              </label>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть">
+                            <svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Доп. упаковка:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon">
+                            <img style="" src="images/content/img_49.png">
+                          </div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">Стандарт</p>
+                            <p class="nc-c__block-feature">деревянный ящик<br>для доставки</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Доп. упаковка</p>
+                          <div class="nc-c__list-inner">
+                            <div class="nci-holder">
+                              <label class="nc-item" for="id_3271_490340">
+                                <input data-graph="" data-name="Деревянный ящик DigitalRazor" data-code="" data-idprop="3271" data-solution="" data-price="1440" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_3271_490340" type="radio" name="v_3271"
+                                  value="490340" checked="">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_49.png" alt="Дополнительная">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">Жесткая</div>
+                                    <div class="nc-item__feature">деревянный ящик<br>для доставки</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_3271" value="1">
+                              </label>
+                            </div>
+                            <div class="nci-holder">
+                              <label class="nc-item" for="id_3271_4903403">
+                                <input data-graph="" data-name="Деревянный ящик DigitalRazor" data-code="" data-idprop="3271" data-solution="" data-price="1440" data-type="CONFIG_ITEM_VALUE" class="nc-item__radio" id="id_3271_4903403" type="radio"
+                                  name="v_3271" value="490340" checked="">
+                                <div class="nc-item__inner">
+                                  <div class="nc-item__image">
+                                    <img data-src-big="" src="images/content/img_49.png" alt="Дополнительная">
+                                  </div>
+                                  <div class="nc-item__title-block">
+                                    <div class="nc-item__title">Стандарт</div>
+                                    <div class="nc-item__feature">для доставки<br>по Санкт-Петербургу</div>
+                                  </div>
+                                </div>
+                                <input type="hidden" data-type="CONFIG_ITEM_QNT" name="q_3271" value="1">
+                              </label>
+                            </div>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть">
+                            <svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="nc-c-list__arrow nc-c-list__arrow--next heartBeat" href="new-design-config.html" title="Вперед"><svg class="nc-c-list__arrow-icon" aria-hidden="true">
+                  <use xlink:href="#slider_arrow_right" /></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nc__section " data-hash="accessories">
+        <div class="nc__inner nc__inner--accessories" data-section="2">
+          <div class="nc__inner-top" style="background-image: url('images/content/nc_bg.jpg')">
+            <div class="nc__inner-cell nc__inner-cell--accessory_picture" style="background-image: url('images/content/img_54.png')"></div>
+            <div class="nc__inner-cell nc__inner-cell--accessory_info custom-scroll">
+              <h3>Cooler Master MasterMouse CM310:</h3>
+              <p>Cooler Master MasterMouse CM310 - это надежная мышь, которая подойдет каждому геймеру. Оптический датчик 10000 DPI обеспечивает максимальную производительность, а две кнопки управления — DPI и кнопка регулировки подсветки — позволят
+                быстро и удобно настроить мышь под себя. Уникальность устройству придают пять предустановленных режимов подсветки и RGB-эффектов, а также полоса RGB, которая опоясывает весь корпус CM310.</p>
+              <div class="col-sm-12 col-md-12 dr-smart-config-element-badge-wrap badge4">
+                <div class="dr-smart-config-element-badge blue">
+                  <div>10000</div>
+                  <div>DPI<br> Cенсор оптический</div>
+                </div>
+                <div class="dr-smart-config-element-badge">
+                  <div>RGB</div>
+                  <div>Подсветка<br> 16.7 млн цветов</div>
+                </div>
+                <div class="dr-smart-config-element-badge">
+                  <div>8</div>
+                  <div>Количество<br> кнопок</div>
+                </div>
+                <div class="dr-smart-config-element-badge">
+                  <div>1000Hz</div>
+                  <div>Частота<br> опроса</div>
+                </div>
+                <div class="dr-smart-config-element-badge">
+                  <div>-</div>
+                  <div>Встроенная память</div>
+                </div>
+                <div class="dr-smart-config-element-badge">
+                  <div>60 ips</div>
+                  <div>или 20g <br>Отслеживание</div>
+                </div>
+                <div class="dr-smart-config-element-badge">
+                  <div>USB</div>
+                  <div>Интерфейс<br> подключения</div>
+                </div>
+                <div class="dr-smart-config-element-badge">
+                  <div>2 года</div>
+                  <div>Гарантии <br>от производителя</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nc__list-block">
+            <div class="nc-c-list">
+              <a class="nc-c-list__arrow nc-c-list__arrow--prev heartBeat" href="new-design-config.html" title="Назад" disabled><svg class="nc-c-list__arrow-icon" aria-hidden="true">
+                  <use xlink:href="#slider_arrow_left" /></svg></a>
+              <div class="nc-c-list__inner">
+                <div class="nc-c-list__item-cell is-active">
+                  <div class="nc-c-list__item is-active" data-parent-section="2" data-section="2-1">
+                    <div class="nc-c-list__item-list">
+                      <div class="nc-c">
+                        <p class="nc-c__title">ЖК монитор:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_55.png" alt=""></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">MG 278Q</p>
+                            <p class="nc-c__block-feature">ASUS<br> 27" 2560x1440 144Hz</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> ЖК монитор</p>
+                          <div class="nc-c__list-filter-block">
+                            <ul class="nc-c__list-filter">
+                              <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link" href="#">Кино</a></li>
+                              <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link is-active" href="#">Игры</a></li>
+                              <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link" href="#">Brand</a></li>
+                              <li class="nc-c__list-filter-item nc-c__list-filter-item--button"><a class="nc-c__list-filter-button" href="#">создать +</a></li>
+                            </ul>
+                          </div>
+                          <div class="nc-c__list-inner">
+                            <label class="nc-item3" for="mon1">
+                              <input class="nc-item3__radio" id="mon1" type="radio" name="monitor" value="mon1" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_55.png" alt="MG 278Q"></div>
+                              <div class="nc-item3__title">MG 278Q</div>
+                              <div class="nc-item3__feature">ASUS<br> 27" 2560x1440 144Hz</div>
+                            </label>
+                            <label class="nc-item3" for="mon2">
+                              <input class="nc-item3__radio" id="mon2" type="radio" name="monitor" value="mon2" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_55.png" alt="MG 278Q"></div>
+                              <div class="nc-item3__title">MG 278Q</div>
+                              <div class="nc-item3__feature">ASUS<br> 27" 2560x1440 144Hz</div>
+                            </label>
+                            <label class="nc-item3" for="mon3">
+                              <input class="nc-item3__radio" id="mon3" type="radio" name="monitor" value="mon3" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_55.png" alt="MG 278Q"></div>
+                              <div class="nc-item3__title">MG 278Q</div>
+                              <div class="nc-item3__feature">ASUS<br> 27" 2560x1440 144Hz</div>
+                            </label>
+                            <label class="nc-item3" for="mon4">
+                              <input class="nc-item3__radio" id="mon4" type="radio" name="monitor" value="mon4" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_55.png" alt="MG 278Q"></div>
+                              <div class="nc-item3__title">MG 278Q</div>
+                              <div class="nc-item3__feature">ASUS<br> 27" 2560x1440 144Hz</div>
+                            </label>
+                            <label class="nc-item3" for="mon5">
+                              <input class="nc-item3__radio" id="mon5" type="radio" name="monitor" value="mon5" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_55.png" alt="MG 278Q"></div>
+                              <div class="nc-item3__title">MG 278Q</div>
+                              <div class="nc-item3__feature">ASUS<br> 27" 2560x1440 144Hz</div>
+                            </label>
+                            <label class="nc-item3" for="mon6">
+                              <input class="nc-item3__radio" id="mon6" type="radio" name="monitor" value="mon6" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_55.png" alt="MG 278Q"></div>
+                              <div class="nc-item3__title">MG 278Q</div>
+                              <div class="nc-item3__feature">ASUS<br> 27" 2560x1440 144Hz</div>
+                            </label>
+                            <label class="nc-item3" for="mon7">
+                              <input class="nc-item3__radio" id="mon7" type="radio" name="monitor" value="mon7" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_55.png" alt="MG 278Q"></div>
+                              <div class="nc-item3__title">MG 278Q</div>
+                              <div class="nc-item3__feature">ASUS<br> 27" 2560x1440 144Hz</div>
+                            </label>
+                            <label class="nc-item3" for="mon8">
+                              <input class="nc-item3__radio" id="mon8" type="radio" name="monitor" value="mon8" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_55.png" alt="MG 278Q"></div>
+                              <div class="nc-item3__title">MG 278Q</div>
+                              <div class="nc-item3__feature">ASUS<br> 27" 2560x1440 144Hz</div>
+                            </label>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Игровая мышь:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_56.png" alt=""></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">SABRE 95</p>
+                            <p class="nc-c__block-feature">CORSAIR<br>USB RGB</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Игровая мышь</p>
+                          <div class="nc-c__list-inner">
+                            <label class="nc-item3" for="mou1">
+                              <input class="nc-item3__radio" id="mou1" type="radio" name="mouse" value="mou1" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="SABRE 95"></div>
+                              <div class="nc-item3__title">SABRE 95</div>
+                              <div class="nc-item3__feature">CORSAIR<br>USB RGB</div>
+                            </label>
+                            <label class="nc-item3" for="mou2">
+                              <input class="nc-item3__radio" id="mou2" type="radio" name="mouse" value="mou2" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="SABRE 95"></div>
+                              <div class="nc-item3__title">SABRE 95</div>
+                              <div class="nc-item3__feature">CORSAIR<br>USB RGB</div>
+                            </label>
+                            <label class="nc-item3" for="mou3">
+                              <input class="nc-item3__radio" id="mou3" type="radio" name="mouse" value="mou3" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="SABRE 95"></div>
+                              <div class="nc-item3__title">SABRE 95</div>
+                              <div class="nc-item3__feature">CORSAIR<br>USB RGB</div>
+                            </label>
+                            <label class="nc-item3" for="mou4">
+                              <input class="nc-item3__radio" id="mou4" type="radio" name="mouse" value="mou4" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="SABRE 95"></div>
+                              <div class="nc-item3__title">SABRE 95</div>
+                              <div class="nc-item3__feature">CORSAIR<br>USB RGB</div>
+                            </label>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Клавиатура:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_56.png" alt="KB 95"></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">KB 95</p>
+                            <p class="nc-c__block-feature">CORSAIR<br>USB RGB</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Клавиатура</p>
+                          <div class="nc-c__list-inner">
+                            <label class="nc-item3" for="kb1">
+                              <input class="nc-item3__radio" id="kb1" type="radio" name="kb" value="kb1" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">KB 95</div>
+                              <div class="nc-item3__feature">CORSAIR<br>USB RGB</div>
+                            </label>
+                            <label class="nc-item3" for="kb2">
+                              <input class="nc-item3__radio" id="kb2" type="radio" name="kb" value="kb2" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">KB 95</div>
+                              <div class="nc-item3__feature">CORSAIR<br>USB RGB</div>
+                            </label>
+                            <label class="nc-item3" for="kb3">
+                              <input class="nc-item3__radio" id="kb3" type="radio" name="kb" value="kb3" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">SABRE 95</div>
+                              <div class="nc-item3__feature">CORSAIR<br>USB RGB</div>
+                            </label>
+                            <label class="nc-item3" for="kb4">
+                              <input class="nc-item3__radio" id="kb4" type="radio" name="kb" value="kb4" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">KB 95</div>
+                              <div class="nc-item3__feature">CORSAIR<br>USB RGB</div>
+                            </label>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Коврик:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_56.png" alt="KB 95"></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">NAME</p>
+                            <p class="nc-c__block-feature">Вендор<br> описание</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Коврик</p>
+                          <div class="nc-c__list-inner">
+                            <label class="nc-item3" for="kov1">
+                              <input class="nc-item3__radio" id="kov1" type="radio" name="kov" value="kov1" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="kov2">
+                              <input class="nc-item3__radio" id="kov2" type="radio" name="kov" value="kov2" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="kov3">
+                              <input class="nc-item3__radio" id="kov3" type="radio" name="kov" value="kov3" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="kov4">
+                              <input class="nc-item3__radio" id="kov4" type="radio" name="kov" value="kov4" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Наушники:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_56.png" alt="KB 95"></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">NAME</p>
+                            <p class="nc-c__block-feature">Вендор<br> описание</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Наушники</p>
+                          <div class="nc-c__list-inner">
+                            <label class="nc-item3" for="nau1">
+                              <input class="nc-item3__radio" id="nau1" type="radio" name="nau" value="nau1" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="nau2">
+                              <input class="nc-item3__radio" id="nau2" type="radio" name="nau" value="nau2" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="nau3">
+                              <input class="nc-item3__radio" id="nau3" type="radio" name="nau" value="nau3" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="nau4">
+                              <input class="nc-item3__radio" id="nau4" type="radio" name="nau" value="nau4" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Игровой стол:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_56.png" alt="KB 95"></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">NAME</p>
+                            <p class="nc-c__block-feature">Вендор<br> описание</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Игровой стол</p>
+                          <div class="nc-c__list-inner">
+                            <label class="nc-item3" for="st1">
+                              <input class="nc-item3__radio" id="st1" type="radio" name="st" value="st1" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="st2">
+                              <input class="nc-item3__radio" id="st2" type="radio" name="st" value="st2" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="st3">
+                              <input class="nc-item3__radio" id="st3" type="radio" name="st" value="st3" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="st4">
+                              <input class="nc-item3__radio" id="st4" type="radio" name="st" value="st4" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                      <div class="nc-c">
+                        <p class="nc-c__title">Кресло:</p>
+                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                          <div class="nc-c__block-icon"><img src="images/content/img_56.png" alt="KB 95"></div>
+                          <div class="nc-c__block-text">
+                            <p class="nc-c__block-title">NAME</p>
+                            <p class="nc-c__block-feature">Вендор<br> описание</p>
+                          </div>
+                        </div>
+                        <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Кресло</p>
+                          <div class="nc-c__list-inner">
+                            <label class="nc-item3" for="kr1">
+                              <input class="nc-item3__radio" id="kr1" type="radio" name="kr" value="kr1" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="kr2">
+                              <input class="nc-item3__radio" id="kr2" type="radio" name="kr" value="kr2" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="kr3">
+                              <input class="nc-item3__radio" id="kr3" type="radio" name="kr" value="kr3" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                            <label class="nc-item3" for="kr4">
+                              <input class="nc-item3__radio" id="kr4" type="radio" name="kr" value="kr4" checked>
+                              <div class="nc-item3__image"><img src="images/content/img_56.png" alt="KB 95"></div>
+                              <div class="nc-item3__title">NAME</div>
+                              <div class="nc-item3__feature">Вендор<br> описание</div>
+                            </label>
+                          </div>
+                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                              <use xlink:href="#times-circle" /></svg></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="nc-c-list__arrow nc-c-list__arrow--next heartBeat" type="button" title="Вперед" disabled><svg class="nc-c-list__arrow-icon" aria-hidden="true">
+                  <use xlink:href="#slider_arrow_right" /></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nc__section nc__section--result">
+        <div class="nc__inner nc__inner--result" data-section="3">
+          <div class="nc__inner-cell nc__inner-cell--result_picture" style="background-image: url('images/content/img_44.png')"></div>
+          <div class="nc__inner-cell nc__inner-cell--result_info custom-scroll">
+            <h3>ИТОГОВАЯ КОНФИГУРАЦИЯ:</h3>
+            <div class="result-info">
+              <div class="result-info__row">
+                <div class="result-info__cell result-info__cell--info">
+                  <p class="result-info__title">Игровой компьютер:</p>
+                  Процессор: 6-ядерный Intel Core i5-8400 2.80 GHz<br>
+                  Кулер: CoolerMaster MasterAir G100L<br>
+                  Системная плата: ASUS PRIME B360M-K<br>
+                  Оперативная память: 8GB (2x4Gb) DDR4 2400Mhz Kingston Hyperx Fury<br>
+                  Видеокарта: ASUS DUAL GTX1060 3G<br>
+                  SSD накопитель - SATA: 120GB WD GREEN<br>
+                  HDD накопитель: HDD 1TB Seagate Barracuda<br>
+                  Корпус: Cooler Master MasterBox MB600L<br>
+                  Блок питания: 500W Cooler Master Elite V3 500<br>
+                  Тестирование: Стандартный стресс-тест основных компонентов 8 часов<br>
+                  Гарантия: Базовая гарантия 12 месяцев<br>
+                  Доставка: Бесплатная доставка
+                </div>
+                <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
+              </div>
+              <div class="result-info__row">
+                <div class="result-info__cell result-info__cell--info">
+                  Монитор: ASUS MG278Q 27"
+                </div>
+                <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
+              </div>
+              <div class="result-info__row">
+                <div class="result-info__cell result-info__cell--info">
+                  Игровая мышь: Corsair Sabre 95 RGB
+                </div>
+                <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
+              </div>
+              <div class="result-info__row">
+                <div class="result-info__cell result-info__cell--transparent"></div>
+                <div class="result-info__cell result-info__cell--price">Итого: 100 000 руб.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner footer__inner--main is-active">
+      <button class="footer__compare" type="button">
+        <svg class="footer__compare-icon" aria-hidden="true">
+          <use xlink:href="#circle-plus"/>
+        </svg>
+        Добавить в сравнение текущую конфигурация
+      </button>
+  
+      <div class="footer__price-block">
+        <p class="footer__price">100 000 руб.</p>
+        <p class="footer__price-per-month">
+          3500 руб. / мес.
+          <button class="footer__month-price-link" type="button" data-src="#popup_6" data-fancybox="popup_6">
+            <svg class="footer__month-price-icon" aria-hidden="true">
+              <use xlink:href="#circle-question"/>
+            </svg>
+          </button>
+        </p>
+      </div>
+  
+      <button class="footer__save" title="Сохранить" data-src="#popup_1" data-fancybox="popup_1">
+        <svg class="footer__save-icon" aria-hidden="true">
+          <use xlink:href="#save"/>
+        </svg>
+        Сохранить
+      </button>
+  
+      <a class="js-config-result footer__result" href="#" title="Итого">Итого</a>
+    </div>
+    <div class="footer__inner footer__inner--result">
+      <button class="footer__compare" type="button">
+        <svg class="footer__compare-icon" aria-hidden="true">
+          <use xlink:href="#circle-plus"/>
+        </svg>
+        Добавить в сравнение текущую конфигурация
+      </button>
+  
+      <button class="footer__edit" type="button">
+        <svg class="footer__edit-icon" aria-hidden="true">
+          <use xlink:href="#edit"/>
+        </svg>
+        Изменить
+      </button>
+  
+      <button class="footer__save" title="Сохранить" data-src="#popup_1" data-fancybox="popup_2">
+        <svg class="footer__save-icon" aria-hidden="true">
+          <use xlink:href="#save"/>
+        </svg>
+        Сохранить
+      </button>
+  
+      <a class="footer__result" href="#">Оформить заказ</a>
+    </div>
+  </footer>
+
+  <div id="popup_1" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
+    <p class="popup__title">НЕ ЗАБУДЬТЕ СОХРАНИТЬ КОНФИГУРАЦИЮ:</p>
+    <p class="popup__text">Рекомендуем сохранить Вашу конфигурацию, что бы не сделанные изменения или вернуться к ней позднее.</p>
+    <p class="popup__text">Ссылка на конфигурацию придет к Вам на электронную почту, а так же все Ваши сохраненные конфигурации будут доступны в личном кабинете.</p>
+    <div class="popup__options-buttons">
+      <a class="popup__option-button" href="#">
+        <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#file-pdf"/></svg>
+        <span class="popup__option-button-text">Сохранить конфигурацию<br> в PDF файл</span>
+      </a>
+      <a class="popup__option-button" href="#popup_3" data-fancybox="popup">
+        <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#mail-bulk"/></svg>
+        <span class="popup__option-button-text">Отправить конфигурацию<br> на почту</span>
+      </a>
+      <a class="popup__option-button" href="#popup_5" data-fancybox="popup">
+        <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#link"/></svg>
+        <span class="popup__option-button-text">Создать постоянную<br> ссылку</span>
+      </a>
+    </div>
+  </div>
+  
+  <div id="popup_2" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
+    <p class="popup__title">ОБРАТИТЕ ВНИМАНИЕ, ВЫ НЕ ЗАВЕРШИЛИ ОФОРМЛЕНИЕ ЗАКАЗА</p>
+    <p class="popup__text">По какой-то причине Вы не завершили оформление заказа, не беспокойтесь мы сохраним вашу конфигурацию и список товаров в вашем личном кабинете, вы сможете продолжить покупки в более удобное время.</p>
+    <div class="popup__options-buttons">
+      <a class="popup__option-button" href="#">
+        <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#comment-dollar"/></svg>
+        <span class="popup__option-button-text">У меня есть вопрос<br> по оплате</span>
+      </a>
+      <a class="popup__option-button" href="#">
+        <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#shipping-fast"/></svg>
+        <span class="popup__option-button-text">У меня есть вопрос<br> по доставке</span>
+      </a>
+      <a class="popup__option-button" href="#">
+        <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#comments-alt"/></svg>
+        <span class="popup__option-button-text">Мне нужна<br> консультация</span>
+      </a>
+    </div>
+    <div class="popup__buttons">
+      <a class="popup__button button" href="#">Не интересует</a>
+      <a class="popup__button button button--red" href="#">Продолжу позже</a>
+    </div>
+  </div>
+  
+  <div id="popup_3" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
+    <p class="popup__title">ОТПРАВИТЬ КОНФИГУРАЦИЮ НА ПОЧТУ:</p>
+    <form class="popup__form" action="">
+      <label class="popup__form-label" for="email">
+        <input class="input" id="email" type="text" placeholder="E-mail">
+      </label>
+      <label class="popup__form-label" for="comment">
+        <textarea class="popup__form-textarea textarea" id="comment" placeholder="Ваш вопрос или комментарий"></textarea>
+      </label>
+      <div class="popup__form-buttons">
+        <button class="popup__form-button button button--red" type="submit">Отправить на почту</button>
+      </div>
+    </form>
+  </div>
+  
+  <div id="popup_4" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
+    <p class="popup__title">Какой у Вас вопрос?</p>
+    <form class="popup__form" action="">
+      <div class="popup__form-row">
+        <div class="popup__form-row-block">
+          <label class="popup__form-label" for="name">
+            <input class="input" id="name" type="text" placeholder="Имя">
+          </label>
+          <label class="popup__form-label" for="phone">
+            <input class="input" id="phone" type="text" placeholder="Телефон">
+          </label>
+        </div>
+        <div class="popup__form-row-block">
+          <label class="popup__form-label" for="email_">
+            <input class="input" id="email_" type="text" placeholder="E-mail">
+          </label>
+          <label class="popup__form-label" for="city">
+            <input class="input" id="city" type="text" placeholder="Город">
+          </label>
+        </div>
+      </div>
+      <label class="popup__form-label" for="question">
+        <textarea class="popup__form-textarea textarea" id="question" placeholder="Ваш вопрос"></textarea>
+      </label>
+      <div class="popup__form-buttons">
+        <button class="popup__form-button button button--red" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
+  
+  <div id="popup_5" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
+    <p class="popup__title">ССЫЛКА НА КОНФИГУРАЦИЮ</p>
+    <p class="popup__text">Конфигурация успешно сохранена и доступна по постоянной<br> ссылке: <a href="https://digital-razor.ru/configurator/670093/" target="_blank">https://digital-razor.ru/configurator/670093/</a></p>
+    <hr>
+    <p class="popup__text">Еще Вы можете отправить ссылку на конфигурацию себе на электронную почту.</p>
+    <form class="popup__form" action="">
+      <div class="popup__form-row">
+        <div class="popup__form-row-block">
+          <label class="popup__form-label" for="email__">
+            <input class="input" id="email__" type="text" placeholder="E-mail">
+          </label>
+        </div>
+      </div>
+      <label class="popup__form-label" for="question_">
+        <textarea class="popup__form-textarea textarea" id="question_" placeholder="Ваш вопрос или комментарий"></textarea>
+      </label>
+      <div class="popup__form-buttons">
+        <button class="popup__form-button button button--red" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
+  
+  <div id="popup_6" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
+    <p class="popup__title">ОПЛАТА ЧАСТЯМИ ОНЛАЙН</p>
+    <div class="credit-block">
+      <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#piggy-bank"/></svg>
+      <div class="credit-block__text-block">
+        <p>Вы можете купить игровой компьютер в кредит и оплачивать всю сумму равными частями в течение выбранного срока - от 2 до 36 месяцев</p>
+      </div>
+    </div>
+    <div class="credit-block">
+      <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#wpforms"/></svg>
+      <div class="credit-block__text-block">
+        <p class="credit-block__title">БЫСТРО И ПРОСТО</p>
+        <p>Заполните короткую анкету и получите решение по Вашей заявке за 2 минуты.</p>
+      </div>
+    </div>
+    <div class="credit-block">
+      <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#ruble-sign"/></svg>
+      <div class="credit-block__text-block">
+        <p class="credit-block__title">ВЫБОР ЛУЧШИХ УСЛОВИЙ</p>
+        <p>Заявка уходит на рассмотрение в больше число финансовых организаций: Райффайзен Банк Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Почта Банк, Альфа-Банк и др.</p>
+      </div>
+    </div>
+    <div class="popup__buttons">
+      <a class="js-popup-close popup__button button" href="#">Назад</a>
+      <a class="popup__button button button--red" href="#">Купить в рассрочку</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="js/global.js"></script>
+
+  <script type="text/javascript" src="js/smart-config.js"></script>
+</body>
+
+</html>
