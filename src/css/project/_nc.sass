@@ -5,7 +5,7 @@
   &.is-open
     .nc__inner-top
       &::before
-        background-color: rgba(#2C2C2E, 0.5)
+        background-color: rgba(#5B5B5B, 0.6)
         content: ''
         left: 0
         height: 100%
@@ -36,6 +36,9 @@
     padding-right: 75px
 
     &--result
+      padding-left: 0
+      padding-right: 0
+
       .nc__inner
         display: flex
 
@@ -77,40 +80,25 @@
             width: 1px
 
     &--result
-      position: relative
-
-      &::before
-        @media (min-width: 992px)
-          background-color: #373737
-          content: ""
-          height: calc(100% - 60px)
-          left: 50%
-          position: absolute
-          top: 30px
-          width: 1px
 
   &__inner-cell
-    @media (min-width: 992px)
-      overflow-y: auto
-      width: 50%
+    overflow-y: auto
+    width: 50%
 
-    &--result_picture,
     &--accessory_picture
       background-position: 50% 50%
       background-repeat: no-repeat
       background-size: contain
-      padding-bottom: 100%
 
-      @media (min-width: 992px)
-        padding-bottom: 0
-
-    &--result_info,
     &--accessory_info,
     &--own_design
-      padding: 15px
+      padding: 30px
 
-      @media (min-width: 992px)
-        padding: 30px
+    &--result_picture,
+    &--result_info
+      padding-top: 60px
+      padding-right: 75px
+      padding-left: 75px
 
     &--accessory_info
       font-size: 12px
@@ -185,6 +173,14 @@
       .nc__inner-canvas
         @media (min-width: 992px)
           margin: auto
+
+  &__result-picture
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: contain
+    height: calc(100% - 60px)
+    margin-bottom: 60px
+    width: 100%
 
   &__inner-top
     display: flex

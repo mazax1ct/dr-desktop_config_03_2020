@@ -102,7 +102,7 @@
 
     &.is-open
       background-color: #191919
-      bottom: 120px
+      bottom: 98px
       display: block
       height: auto
       min-width: 100%
@@ -112,6 +112,12 @@
       width: auto
       z-index: 1
 
+      @media(min-height: 650px)
+        bottom: 110px
+
+      @media(min-height: 720px)
+        bottom: 120px
+
       .nc-c__list-close
         display: block
 
@@ -120,38 +126,53 @@
         align-items: flex-start
         display: flex !important
         flex-wrap: wrap
+        padding: 0
+
+      .nc-c__list-filter-block
+        border-bottom: 1px solid #262626
+
+      .nc-c__list-filter-link
+        border-top: none
+        border-bottom: 2px solid transparent
+
+        &.is-active
+          border-bottom-color: $main-color
 
     &--tile_1
       &.is-open
-        @media (min-width: 992px)
-          min-width: 142px
+        min-width: 140px
 
-        @media(min-width: 1500px) and (min-height: 730px)
-          min-width: 200px
+        @media(min-height: 700px)
+          min-width: 180px
 
     &--tile_2
       &.is-open
-        @media (min-width: 992px)
-          min-width: 285px
+        min-width: 280px
 
-        @media(min-width: 1500px) and (min-height: 730px)
-          min-width: 400px
+        @media(min-height: 700px)
+          min-width: 360px
 
     &--tile_3
       &.is-open
-        @media (min-width: 992px)
-          min-width: 426px
+        min-width: 420px
 
-        @media(min-width: 1500px) and (min-height: 730px)
-          min-width: 600px
+        @media(min-height: 700px)
+          min-width: 540px
+
+      .nc-item2:nth-child(3),
+      .nc-item2:nth-child(6)
+        border-right: none
 
     &--tile_4
       &.is-open
-        @media (min-width: 992px)
-          min-width: 570px
+        min-width: 560px
 
-        @media(min-width: 1500px) and (min-height: 730px)
-          min-width: 800px
+        @media(min-height: 700px)
+          min-width: 720px
+
+      .nc-item2:nth-child(4),
+      .nc-item2:nth-child(8)
+        border-right: none
 
     &--double
       &.is-open
@@ -190,11 +211,14 @@
     margin-right: 29px
 
     &--button
-      @media(min-width: 1400px)
-        margin-left: 20px
+      margin-left: auto
+      margin-right: 20px
+      text-transform: none
 
-    &:last-child
-      margin-right: 0
+      .nc-c__list-filter-link
+        font-family: $main-font
+        font-size: 16px
+        font-weight: 500
 
   &__list-filter-link
     align-items: center
@@ -234,7 +258,11 @@
       width: 100%
 
     &--no_filter
-      padding-top: 68px
+      padding-top: 30px
+
+      & + .nc-c__list-close
+        right: 2px
+        top: 2px
 
   &__list-block
     & > .nci-holder

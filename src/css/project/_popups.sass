@@ -1,287 +1,175 @@
 .popup
-  background-color: #1D1D1D
-  color: #E1E1E1
+  background-color: #191919
+  color: #808080
   display: none
-  max-width: 1200px
-  padding: 15px
+  max-width: 776px
+  padding: 55px 70px
   width: 100%
 
-  @media(min-width: 768px)
-    padding: 30px
-
-  @media(min-width: 1200px)
-    font-size: 20px
-    padding: 50px
-
   &__close
+    align-items: center
     background: none
     border: none
     cursor: pointer
+    display: flex
     height: 40px
+    justify-content: center
     left: auto
     outline: none
     position: absolute
     padding: 0
-    right: 6px
-    top: 6px
+    right: 10px
+    top: 10px
     width: 40px
+
+    &:hover
+      .popup__close-icon
+        fill: $main-color
 
     &:focus
       outline: none
 
-    @media(min-width: 768px)
-      right: 12px
-      top: 12px
-
-    @media(min-width: 1400px)
-      right: 24px
-      top: 24px
-
   &__close-icon
-    fill: #E1E1E1
-    height: 40px
-    width: 40px
+    fill: rgba(#fff, 0.3)
+    height: 12px
+    transition: fill 0.3s
+    width: 12px
 
   &__title
-    font-size: 20px
-    font-weight: 900
-    margin-bottom: 20px
-    padding-right: 45px
+    color: #fff
+    font-family: $secondary-font
+    font-size: 28px
+    margin-bottom: 25px
     text-transform: uppercase
 
-    @media(min-width: 992px)
-      font-size: 28px
-      margin-bottom: 35px
-
-    @media(min-width: 1600px)
-      font-size: 30px
-      margin-bottom: 50px
-
   &__text
+    font-size: 14px
     margin-bottom: 10px
 
-    @media(min-width: 992px)
-      margin-bottom: 20px
-
-    @media(min-width: 1600px)
-      font-size: 24px
-
     a
-      color: #E5262D
-
-      &::-moz-selection
-        color: #fff
-
-      &::selection
-        color: #fff
+      color: #fff
 
   &__options-buttons
-    margin-top: 30px
-
-    @media(min-width: 600px)
-      align-items: flex-start
-      display: flex
-      justify-content: center
-
-    @media(min-width: 1200px)
-      margin-top: 60px
+    align-items: flex-start
+    display: flex
+    justify-content: center
+    margin-top: 50px
 
   &__option-button
-    color: #E1E1E1
-    display: block
-    margin-left: auto
-    margin-right: auto
-    margin-bottom: 20px
-    text-align: center
+    align-items: center
+    color: #fff
+    display: flex
+    font-size: 16px
+    font-weight: 500
+    margin-right: 40px
     transition: color 0.3s
 
-    &:last-child
-      margin-bottom: 0
-      margin-right: 0
-
-    @media(min-width: 600px)
-      margin-left: 0
-      margin-right: 60px
-      margin-left: 0
-      margin-bottom: 0
-      width: 180px
-
-    @media(min-width: 1200px)
-      font-size: 18px
-      width: 290px
-
-    @media(min-width: 1600px)
-      font-size: 24px
-
     &:hover
-      color: #E5262D
       text-decoration: none
 
       .popup__option-button-icon
-        fill: #E5262D
+        border-color: $main-color
+        background-color: $main-color
+
+        svg
+          fill: #fff
 
   &__option-button-icon
-    fill: #E1E1E1
-    height: 50px
-    transition: fill 0.3s
-    width: 50px
+    align-items: center
+    background-color: transparent
+    border: 1px solid #303030
+    border-radius: 50%
+    display: flex
+    height: 52px
+    justify-content: center
+    margin-right: 15px
+    min-width: 52px
+    transition: background-color 0.3s, border-color 0.3s
+    width: 52px
 
-    @media(min-width: 600px)
-      height: 75px
-      width: 75px
-
-    @media(min-width: 992px)
-      height: 100px
-      width: 100px
+    svg
+      fill: $main-color
+      height: 25px
+      transition: fill 0.3s
+      width: 25px
 
   &__option-button-text
     display: block
 
   &__buttons
-    margin-top: 20px
+    display: flex
+    justify-content: center
+    margin-top: 30px
     text-align: center
-
-    @media(min-width: 600px)
-      display: flex
-      justify-content: center
-      margin-top: 30px
 
   &__button
     margin: 5px
-    padding-top: 15px
-    padding-bottom: 15px
-    width: 280px
-
-    @media(min-width: 600px)
-      padding-top: 20px
-      padding-bottom: 20px
-
-    @media(min-width: 1600px)
-      font-size: 24px
-      padding-top: 25px
-      padding-bottom: 25px
-
-  &__credit-block
-    @media(min-width: 600px)
-      display: flex
-
-  &__credit-block-icon
-    fill: #E1E1E1
-    height: 50px
-    transition: fill 0.3s
-    width: 50px
-
-    @media(min-width: 600px)
-      height: 75px
-      width: 75px
-
-    @media(min-width: 992px)
-      height: 100px
-      width: 100px
+    min-width: 200px
 
   &__form-row
-    @media(min-width: 600px)
-      display: flex
+    display: flex
 
   &__form-row-block
-    @media(min-width: 600px)
-      margin-right: 15px
-      width: 50%
+    margin-right: 15px
+    width: 50%
 
     &:last-child
       margin-right: 0
 
   &__form-label
     display: block
-    margin-bottom: 15px
+    margin-bottom: 10px
 
   &__form-textarea
-    @media(min-width: 1200px)
-      height: 250px
-
-    @media(min-width: 1600px)
-      height: 300px
 
   &__form-buttons
-    text-align: center
-
-    @media(min-width: 600px)
-      text-align: right
+    margin-top: 20px
 
   &__form-button
-    width: 280px
-
-    @media(min-width: 1600px)
-      font-size: 24px
+    width: 200px
 
   .fancybox-button
     display: none
 
   hr
+    background-color: rgba(#C4C4C4, 0.2)
+    border: none
+    color: #C4C4C4
+    height: 1px
     margin-top: 20px
-    margin-bottom: 20px
-
-    @media(min-width: 1600px)
-      margin-top: 30px
-      margin-bottom: 30px
+    margin-bottom: 25px
+    margin-left: -70px
+    margin-right: -70px
 
 .credit-block
-  min-height: 50px
+  align-items: flex-end
+  display: flex
   margin-bottom: 20px
-  position: relative
-
-  @media(min-width: 992px)
-    font-size: 16px
-
-  @media(min-width: 1400px)
-    font-size: 24px
-    min-height: 100px
-    margin-bottom: 30px
-
-  @media(min-width: 1900px)
-    font-size: 28px
-    min-height: 120px
 
   &__text-block
-    padding-left: 80px
-
-    @media(min-width: 1200px)
-      padding-left: 120px
-
-    @media(min-width: 1400px)
-      padding-left: 180px
-
-    @media(min-width: 1900px)
-      padding-left: 250px
+    padding-left: 30px
 
   &__icon
-    fill: #E1E1E1
-    height: 50px
-    transition: fill 0.3s
-    width: 50px
-    left: 0
-    position: absolute
-    top: 0
-    z-index: 1
+    min-width: 50px
 
-    @media(min-width: 1200px)
-      height: 75px
-      width: 75px
-
-    @media(min-width: 1400px)
-      height: 100px
-      width: 100px
-
-    @media(min-width: 1900px)
-      bottom: 0
-      height: 120px
-      top: auto
-      width: 120px
+    svg
+      fill: #fff
+      height: 50px
+      width: 50px
 
   &__title
-    font-size: 18px
+    color: #fff
+    font-family: $secondary-font
+    font-size: 20px
     font-weight: 900
     margin-bottom: 10px
 
-    @media(min-width: 1400px)
-      font-size: 30px
+.copy-link
+  align-items: center
+  background-position: 100% 0
+  background-repeat: no-repeat
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='24' viewBox='0 0 21 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23DF4834' d='M7.5 24H16.4531C18.5209 24 20.2031 22.3178 20.2031 20.25V7.54688C20.2031 5.47906 18.5209 3.79688 16.4531 3.79688H7.5C5.43219 3.79688 3.75 5.47906 3.75 7.54688V20.25C3.75 22.3178 5.43219 24 7.5 24ZM16.4531 5.67188C17.4869 5.67188 18.3281 6.51306 18.3281 7.54688V20.25C18.3281 21.2838 17.4869 22.125 16.4531 22.125H7.5C6.46619 22.125 5.625 21.2838 5.625 20.25V7.54688C5.625 6.51306 6.46619 5.67188 7.5 5.67188H16.4531ZM0 17.9062V3.75C0 1.68219 1.68219 0 3.75 0H14.1562C14.6741 0 15.0938 0.419678 15.0938 0.9375C15.0938 1.45532 14.6741 1.875 14.1562 1.875H3.75C2.71619 1.875 1.875 2.71619 1.875 3.75V17.9062C1.875 18.4241 1.45532 18.8438 0.9375 18.8438C0.419678 18.8438 0 18.4241 0 17.9062Z'/%3E%3C/svg%3E")
+  display: inline-flex
+  min-height: 24px
+  padding-right: 30px
+  vertical-align: top
