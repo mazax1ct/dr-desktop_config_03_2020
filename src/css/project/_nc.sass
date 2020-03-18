@@ -44,24 +44,21 @@
     &.is-active
       display: flex
 
+    &--accessories
+      padding-left: 0
+      padding-right: 0
+
     &--result
       height: 100%
       padding-left: 0
       padding-right: 0
 
   &__inner-cell
+    overflow-x: hidden
     overflow-y: auto
     width: 50%
 
-    &--accessory_picture
-      background-position: 50% 50%
-      background-repeat: no-repeat
-      background-size: contain
-
-    &--accessory_info,
-    &--own_design
-      padding: 30px
-
+    &--accessory_picture,
     &--result_picture,
     &--result_info
       padding-top: 60px
@@ -69,18 +66,11 @@
       padding-left: 75px
 
     &--accessory_info
-      font-size: 12px
-
-      @media (min-width: 1200px)
-        font-size: 14px
-
-      @media (min-width: 1600px)
-        font-size: 16px
-
-      @media (min-width: 1900px)
-        font-size: 22px
-        padding-left: 60px
-        padding-right: 60px
+      font-size: 16px
+      height: calc(100% - 30px)
+      padding-top: 60px
+      padding-right: 75px
+      padding-left: 75px
 
       h1,
       h2,
@@ -94,54 +84,7 @@
         &:last-child
           margin-bottom: 0
 
-      .dr-smart-config-element-badge-wrap
-        @media (min-width: 1900px)
-          margin-top: 40px
-
-    &--canvas
-      background-color: #272727
-      display: none
-      min-height: 275px
-      padding: 15px
-      text-align: center
-
-      &.is-active
-        display: block
-
-        @media (min-width: 992px)
-          display: flex
-
-      @media (min-width: 992px)
-        align-items: center
-        background: none
-        display: flex
-        padding: 30px
-
-      &:first-child
-        @media (min-width: 992px)
-          justify-content: flex-end
-
-      &:nth-child(2)
-        @media (min-width: 992px)
-          justify-content: flex-start
-
-    &--own_design_canvas
-      text-align: center
-
-      @media(min-width: 992px)
-        display: flex
-        flex-direction: column
-        justify-content: center
-        text-align: left
-
-      &:nth-child(2)
-        @media (min-width: 992px)
-          order: 3
-
-      .nc__inner-canvas
-        @media (min-width: 992px)
-          margin: auto
-
+  &__accessory-picture,
   &__result-picture
     background-position: 50% 50%
     background-repeat: no-repeat
@@ -208,6 +151,10 @@
     &.is-active
       display: block
 
+  &__inner-bottom
+    &.is-disabled
+      display: none
+
   &__list-block
     align-items: center
     display: flex
@@ -224,18 +171,13 @@
     &--design
       display: flex
 
-    &.is-disabled
-      display: none
-
   &__tabs
     border-bottom: 1px solid rgba(#fff, 0.05)
+    height: 42px
     margin-left: -75px
     margin-right: -75px
     padding-left: 75px
     padding-right: 75px
-
-    &.is-disabled
-      display: none
 
   &__tabs-list
     display: flex

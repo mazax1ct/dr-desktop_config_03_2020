@@ -27,6 +27,23 @@ function ncClose2() {
   });
 }
 
+//функция открытия "итого"
+function configResultOpen() {
+  //переключаем видимость основной секции
+  $('.nc__inner-top').removeClass('is-active');
+  $('.nc__inner-top--result').addClass('is-active');
+
+  $('.nc__inner-bottom').addClass('is-disabled');
+
+  //переключаем кнопки в футере
+  $('.footer__inner').removeClass('is-active');
+  $('.footer__inner--result').addClass('is-active');
+
+  //переключение состояний стрелок слайдера
+  $(".nc-c-list__arrow--prev").prop("disabled", true);
+  $(".nc-c-list__arrow--next").prop("disabled", false);
+}
+
 //закрытие попапа блока компонентов при выборе компонента
 $('.nc-item').click(function() {
   ncClose();
@@ -148,8 +165,22 @@ $(".js-nc-c2-block-close").click(function () {
 
 //переключение табов конфига
 $('.js-config-tab').click(function () {
+  //смена классов у табов
   $('.js-config-tab').removeClass('is-active');
   $(this).addClass('is-active');
+
+  //переключение состояния кнопки назад в слайдере компонентов
+  if($(this).parent().index() > 0) {
+    $(".nc-c-list__arrow--prev").prop("disabled", false);
+  } else {
+    $(".nc-c-list__arrow--prev").prop("disabled", true);
+  }
+
+  //смена классов наборов компонентов
+  $('.nc-c-list__item-cell').removeClass('is-active');
+  $('.nc-c-list__item-cell[data-tab="'+ $(this).attr('data-tab') +'"]').addClass('is-active');
+
+  //смена классов разделов (конфиг/аксессуары/итого)
   $('.nc__inner-top').removeClass('is-active');
   $('.nc__inner-top[data-section="'+ $(this).attr('data-section') +'"]').addClass('is-active');
   return false;
@@ -160,6 +191,8 @@ $(".nc-c-list__arrow").click(function () {
   var parent = $(this).parent();
   var slides = parent.find($('.nc-c-list__item-cell')).length; //кол-во слайдов
 
+  console.log(slides);
+
   if(slides > 1) { //если есть другие слайды
 
     if($(this).hasClass("nc-c-list__arrow--next")) { //если движемся вперед
@@ -167,14 +200,27 @@ $(".nc-c-list__arrow").click(function () {
       var slide = $(".nc-c-list__item-cell.is-active").index();
 
       if ((slide + 1) < slides) {
+        //смена набора компонентов
         $(".nc-c-list__item-cell").removeClass("is-active");
         $(".nc-c-list__item-cell").eq(slide + 1).addClass("is-active");
+
+        //смена активности кнопки
         $(".nc-c-list__arrow--prev").prop("disabled", false);
+
+        //смена таба
+        $(".nc__tabs-link").removeClass("is-active");
+        $(".nc__tabs-item").eq(slide + 1).find(".nc__tabs-link").addClass("is-active");
+
         return false;
       }
 
       if (slide + 2 >= slides) {
+        //смена активности кнопки
         $(".nc-c-list__arrow--next").prop("disabled", true);
+
+        //открытие итого
+        configResultOpen();
+
         return false;
       }
     }
@@ -183,9 +229,18 @@ $(".nc-c-list__arrow").click(function () {
       var slide = $(".nc-c-list__item-cell.is-active").index();
 
       if(slide > 0) {
+        //смена набора компонентов
         $(".nc-c-list__item-cell").removeClass("is-active");
         $(".nc-c-list__item-cell").eq(slide - 1).addClass("is-active");
+
+        //смена активности кнопки
         $(".nc-c-list__arrow--next").prop("disabled", false);
+
+        //смена таба
+        $(".nc__tabs-link").removeClass("is-active");
+        $(".nc__tabs-item").eq(slide - 1).find(".nc__tabs-link").addClass("is-active");
+
+        return false;
       }
 
       if(slide - 1 == 0) {
@@ -197,7 +252,6 @@ $(".nc-c-list__arrow").click(function () {
   } else { //если слайдов нет, то кнопки отключаем на php при формировании шаблона
     console.log("слайдов 1, нужно отключить кнопки");
   }
-
 });
 
 //открытие описания компонена
@@ -213,6 +267,45 @@ $(".js-nci-info-opener").click(function () {
 $(".js-nci-info-closer").click(function () {
   $(this).parent(".nci-info").removeClass("is-active");
   $(this).parent(".nci-info").prev(".nci-button").removeClass("is-active");
+  return false;
+});
+
+//переключение выводимых параметров производительности
+$(".js-performance-type .nc__performance-tabs-link").click(function () {
+  $(".js-performance-type .nc__performance-tabs-link").removeClass("is-active");
+  $(this).addClass("is-active");
+  $(".nc__performance-bars-tab").removeClass("is-active");
+  $(".nc__performance-bars-tab[data-target=" + $(this).attr("data-target") + "]").addClass("is-active");
+  return false;
+});
+
+//переключение на "итоговую конфигурацию" и кнопки в футере
+$(".js-config-result").click(function () {
+  configResultOpen();
+  return false;
+});
+
+//возврат из "итоговой конфигурации" к конфигу
+$(".js-config-edit").click(function () {
+  //переключаем видимость основной секции на начало конфига
+  $('.nc__inner-top').removeClass('is-active');
+  $('.nc__inner-top:first').addClass('is-active');
+
+  //переключаем табы на начало конфига
+  $('.nc__tabs-link').removeClass('is-active');
+  $('.nc__tabs-item:first .nc__tabs-link').addClass('is-active');
+
+  //переключаем слайдер компонентов на начало
+  $('.nc-c-list__item-cell').removeClass('is-active');
+  $('.nc-c-list__item-cell:first').addClass('is-active');
+
+  //возвращаем видимость блоку с табами
+  $('.nc__inner-bottom').removeClass('is-disabled');
+
+  //переключаем кнопки в футере
+  $('.footer__inner').removeClass('is-active');
+  $('.footer__inner--main').addClass('is-active');
+
   return false;
 });
 
