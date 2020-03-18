@@ -27,11 +27,6 @@ function ncClose2() {
   });
 }
 
-// закрытие списка компонентов по перевороту устройства
-$(window).on("orientationchange", function() {
-  ncClose();
-});
-
 //закрытие попапа блока компонентов при выборе компонента
 $('.nc-item').click(function() {
   ncClose();
@@ -46,26 +41,6 @@ $('.nc-item2').click(function() {
 $('.nc-item3').click(function() {
   ncClose();
   ncClose2();
-});
-
-//открытие/закрытие главного меню
-$(".js-menu-opener").click(function() {
-  if($(this).hasClass("is-active")) {
-    $(this).removeClass("is-active"); //снимаем класс активности с кнопки
-    $("body").removeClass("overflow"); //убираем запрет скролла на body
-    $(".main-menu").removeClass("is-open"); //закрываем меню
-    $(".footer").removeClass("blur"); //убираем класс размытия
-    $(".nc").removeClass("blur");
-  } else { //обратные действия
-    $(this).addClass("is-active");
-    $("body").addClass("overflow");
-    $(".main-menu").addClass("is-open");
-    $(".footer").addClass("blur");
-    $(".nc").addClass("blur");
-  }
-  $('.js-personal-opener').removeClass('is-active'); //закрываем меню личного каинета
-  $(".personal-menu").removeClass("is-open");
-  return false;
 });
 
 //открытие/закрытие меню личного кабинета
@@ -171,6 +146,15 @@ $(".js-nc-c2-block-close").click(function () {
   ncClose2();
 });
 
+//переключение табов конфига
+$('.js-config-tab').click(function () {
+  $('.js-config-tab').removeClass('is-active');
+  $(this).addClass('is-active');
+  $('.nc__inner-top').removeClass('is-active');
+  $('.nc__inner-top[data-section="'+ $(this).attr('data-section') +'"]').addClass('is-active');
+  return false;
+});
+
 //листалка "слайдов" конфига
 $(".nc-c-list__arrow").click(function () {
   var parent = $(this).parent();
@@ -191,7 +175,7 @@ $(".nc-c-list__arrow").click(function () {
 
       if (slide + 2 >= slides) {
         $(".nc-c-list__arrow--next").prop("disabled", true);
-        //return false;
+        return false;
       }
     }
 
@@ -230,4 +214,53 @@ $(".js-nci-info-closer").click(function () {
   $(this).parent(".nci-info").removeClass("is-active");
   $(this).parent(".nci-info").prev(".nci-button").removeClass("is-active");
   return false;
+});
+
+$(document).ready(function () {
+  //слайдер корпусов
+  if ($('.js-boxes-slider').length) {
+    $('.js-boxes-slider').slick({
+      fade: true,
+      auto: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      infinite: false,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#design_slider_arrow_left"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#design_slider_arrow_right"/></svg></button>',
+      dots: false,
+      asNavFor: $('.js-boxes-vertical-slider')
+    });
+  }
+
+  //вертикальный слайдер корпусов
+  if ($('.js-boxes-vertical-slider').length) {
+    $('.js-boxes-vertical-slider').slick({
+      vertical: true,
+      auto: false,
+      mobileFirst: true,
+      slidesToShow: 2,
+      infinite: false,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#design_slider_arrow_down"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#design_slider_arrow_up"/></svg></button>',
+      dots: false,
+      focusOnSelect: true,
+      asNavFor: $('.js-boxes-slider'),
+      responsive: [
+        {
+          breakpoint: 1299,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 1599,
+          settings: {
+            slidesToShow: 4
+          }
+        }
+      ]
+    });
+  }
 });

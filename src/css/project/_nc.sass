@@ -26,60 +26,28 @@
       opacity: 0.3
       pointer-events: none
 
-  &__section
+  &__inner
     background-position: 50% 0
     background-size: cover
     background-repeat: no-repeat
-    display: none
+    display: flex
+    flex-direction: column
     height: 100%
+
+  &__inner-top
+    display: none
+    flex-grow: 1
+    height: calc(100% - 172px)
     padding-left: 75px
     padding-right: 75px
 
+    &.is-active
+      display: flex
+
     &--result
+      height: 100%
       padding-left: 0
       padding-right: 0
-
-      .nc__inner
-        display: flex
-
-    &.is-active
-      display: block !important
-
-  &__inner
-    display: none
-
-    &.is-active
-      display: flex !important
-      height: 100%
-
-    &--config
-      flex-direction: column
-
-    &--accessories
-      flex-direction: column
-
-      .nc__inner-top
-        display: flex
-        height: calc(100% - 110px)
-        position: relative
-
-        @media(min-width: 1300px) and (min-height: 740px)
-          height: calc(100% - 120px)
-
-        @media(min-width: 1900px) and (min-height: 1000px)
-          height: calc(100% - 180px)
-
-        &::after
-          @media (min-width: 992px)
-            background-color: #373737
-            content: ""
-            height: calc(100% - 60px)
-            left: 50%
-            position: absolute
-            top: 30px
-            width: 1px
-
-    &--result
 
   &__inner-cell
     overflow-y: auto
@@ -182,103 +150,17 @@
     margin-bottom: 60px
     width: 100%
 
-  &__inner-top
-    display: flex
-    flex-grow: 1
-
-    &--design-block
-      display: none
-
-      @media (min-width: 992px)
-        display: none
-
-      &.is-active
-        display: block
-
-        @media (min-width: 992px)
-          display: flex
-
-    &--own_design
-      &.is-active
-        background-color: #202020
-        height: 100%
-        left: 0
-        overflow-y: auto
-        position: fixed
-        top: 0
-        width: 100%
-        z-index: 100
-
-        @media (min-width: 992px)
-          background-color: #242424
-          height: auto
-          justify-content: center
-          left: auto
-          position: relative
-          top: auto
-          z-index: 1
-
-      &::before
-        @media (min-width: 992px)
-          position: absolute
-          top: 30px
-          left: 50%
-          width: 1px
-          height: calc(100% - 60px)
-          content: ''
-          background-color: #373737
-
-    &.fixed
-      @media (max-width: 991px)
-        padding-bottom: 275px
-
-      .nc__inner-cell--canvas
-        @media (max-width: 991px)
-          left: 0
-          position: fixed
-          top: 55px
-          width: 100%
-          z-index: 5
-
-  &__inner-canvas
-    height: 240px
-    width: 240px
-
-    @media (min-width: 992px) and (min-height: 600px)
-      height: calc(100vh - 300px)
-      max-height: 840px
-      max-width: 840px
-      padding-bottom: 0
-      width: calc(100vh - 300px)
-
-    @media (min-width: 1300px) and (min-height: 740px)
-      height: calc(100vh - 310px)
-      width: calc(100vh - 310px)
-
-    @media (min-width: 1600px) and (min-height: 850px)
-      height: calc(100vh - 350px)
-      width: calc(100vh - 350px)
-
-    @media (min-width: 1900px) and (min-height: 1000px)
-      height: calc(100vh - 400px)
-      width: calc(100vh - 400px)
-
   &__picture-block
+    display: flex
+    flex-direction: column
+    justify-content: center
     width: 51.1628%
 
-  &__picture
-    @media (min-width: 992px)
-      max-width: 70%
-
-    @media(min-width: 1900px) and (min-height: 900px)
-      max-width: 80%
-
   &__performance-block
-    padding-top: 10px
+    display: flex
+    flex-direction: column
+    justify-content: center
     width: 48.8372%
-
-    @media(min-height: 800px)
-      padding-top: 38px
 
   &__performance-tabs
     display: flex
@@ -333,6 +215,8 @@
     height: 130px
     min-width: 100%
     order: 3
+    padding-left: 75px
+    padding-right: 75px
     position: relative
     width: 100%
     z-index: 4
@@ -340,10 +224,18 @@
     &--design
       display: flex
 
+    &.is-disabled
+      display: none
+
   &__tabs
     border-bottom: 1px solid rgba(#fff, 0.05)
     margin-left: -75px
     margin-right: -75px
+    padding-left: 75px
+    padding-right: 75px
+
+    &.is-disabled
+      display: none
 
   &__tabs-list
     display: flex

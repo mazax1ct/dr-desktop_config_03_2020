@@ -1,19 +1,3 @@
-//если возвращаемся из дизайн конфига сразу на аксессуары
-if(window.location.hash.substring(1) == 'accessories') {
-  $('.nc__section[data-hash="accessories"] .nc__inner').slideDown(0, function () { //открываем секцию аксессов
-    $(".nc__inner").not($('.nc__section[data-hash="accessories"] .nc__inner')).slideUp(0, function () { //закрываем остальные секции
-      $(".nc__inner").not($('.nc__section[data-hash="accessories"] .nc__inner')).removeClass("is-active"); //закрываем внутренности остальных секций      
-    });
-
-    //переключаем класс активности текущей родительской секции
-    $('.nc__section').removeClass("is-active");
-    $('.nc__section[data-hash="accessories"]').addClass("is-active");
-
-    //переключаем класс активности текущей секции
-    $('.nc__section[data-hash="accessories"] .nc__inner').addClass("is-active");
-  });
-}
-
 //переключение выводимых параметров производительности
 $(".js-performance-type .nc__performance-tabs-link").click(function () {
   $(".js-performance-type .nc__performance-tabs-link").removeClass("is-active");
@@ -26,12 +10,11 @@ $(".js-performance-type .nc__performance-tabs-link").click(function () {
 //переключение на "итоговую конфигурацию" и кнопки в футере
 $(".js-config-result").click(function () {
   //переключаем видимость основной секции
-  $('.nc__section').removeClass('is-active');
-  $('.nc__section--result').addClass('is-active');
+  $('.nc__inner-top').removeClass('is-active');
+  $('.nc__inner-top--result').addClass('is-active');
 
-  //меняем классы активности
-  $('.nc__inner').removeClass("is-active");
-  $('.nc__inner--result').addClass("is-active");
+  $('.nc__tabs').addClass('is-disabled');
+  $('.nc__list-block').addClass('is-disabled');
 
   //переключаем кнопки в футере
   $('.footer__inner').removeClass('is-active');
@@ -42,15 +25,12 @@ $(".js-config-result").click(function () {
 
 //возврат из "итоговой конфигурации" к конфигу
 $(".js-config-edit").click(function () {
-  if(window.location.hash.substring(1) == 'accessories') { //если открыли итог на аксессах
-    //переключаем видимость основной секции на начало конфига
-    $('.nc__section').removeClass('is-active');
-    $('.nc__section[data-hash="accessories"]').addClass('is-active');
+  //переключаем видимость основной секции на начало конфига
+  $('.nc__inner-top').removeClass('is-active');
+  $('.nc__inner-top:first').addClass('is-active');
 
-    //переключаем видимость основной секции на начало конфига
-    $('.nc__section').removeClass('is-active');
-    $('.nc__section:first').addClass('is-active');
-  }
+  $('.nc__tabs').removeClass('is-disabled');
+  $('.nc__list-block').removeClass('is-disabled');
 
   //переключаем кнопки в футере
   $('.footer__inner').removeClass('is-active');

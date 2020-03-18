@@ -1,0 +1,70 @@
+.design-manage
+  align-items: center
+  display: flex
+  justify-content: flex-end
+  height: 45px
+
+.light-up
+  align-items: center
+  display: flex
+  cursor: pointer
+  font-size: 12px
+  font-weight: 500
+  margin-right: 20px
+  padding-top: 10px
+  padding-bottom: 10px
+  position: relative
+
+  &__input
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+    &:checked + .light-up__checkbox::before
+      background-color: $main-color
+      left: 3px
+
+  &__checkbox
+    background-color: #2C2C2E
+    border-radius: 9px
+    height: 18px
+    margin-right: 11px
+    position: relative
+    width: 36px
+
+    &::before
+      background-color: rgba(#fff, 0.3)
+      border-radius: 50%
+      content: ''
+      height: 14px
+      left: 19px
+      position: absolute
+      top: 50%
+      transition: left 0.3s, background-color 0.3s
+      transform: translateY(-50%)
+      width: 14px
+
+.add-art
+  align-items: center
+  background: none
+  border: none
+  color: #fff
+  cursor: pointer
+  display: flex
+  font-size: 12px
+  font-weight: 500
+  padding: 10px 0
+
+  &:hover
+    .add-art__icon
+      transform: scale(1.2)
+
+  &__icon
+    fill: #fff
+    height: 16px
+    margin-right: 11px
+    transform: scale(1)
+    transition: transform 0.3s
+    width: 16px
