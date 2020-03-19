@@ -42,6 +42,9 @@ function configResultOpen() {
   //переключение состояний стрелок слайдера
   $(".nc-c-list__arrow--prev").prop("disabled", true);
   $(".nc-c-list__arrow--next").prop("disabled", false);
+
+  //смена фона
+  $('.nc__inner').removeClass('nc__inner--accessories').addClass('nc__inner--result');
 }
 
 //закрытие попапа блока компонентов при выборе компонента
@@ -183,6 +186,14 @@ $('.js-config-tab').click(function () {
   //смена классов разделов (конфиг/аксессуары/итого)
   $('.nc__inner-top').removeClass('is-active');
   $('.nc__inner-top[data-section="'+ $(this).attr('data-section') +'"]').addClass('is-active');
+
+  //смена фона
+  if($(this).attr('data-section') == 2) {
+    $('.nc__inner').removeClass('nc__inner--result').addClass('nc__inner--accessories');
+  } else {
+    $('.nc__inner').removeClass('nc__inner--accessories');
+  }
+
   return false;
 });
 
@@ -190,8 +201,6 @@ $('.js-config-tab').click(function () {
 $(".nc-c-list__arrow").click(function () {
   var parent = $(this).parent();
   var slides = parent.find($('.nc-c-list__item-cell')).length; //кол-во слайдов
-
-  console.log(slides);
 
   if(slides > 1) { //если есть другие слайды
 
@@ -210,6 +219,17 @@ $(".nc-c-list__arrow").click(function () {
         //смена таба
         $(".nc__tabs-link").removeClass("is-active");
         $(".nc__tabs-item").eq(slide + 1).find(".nc__tabs-link").addClass("is-active");
+
+        //смена классов разделов (конфиг/аксессуары/итого)
+        $('.nc__inner-top').removeClass('is-active');
+        $('.nc__inner-top[data-section="'+ $(".nc__tabs-item").eq(slide + 1).find(".nc__tabs-link").attr('data-section') +'"]').addClass('is-active');
+
+        //смена фона
+        if($(".nc__tabs-item").eq(slide + 1).find(".nc__tabs-link").attr('data-section') == 2) {
+          $('.nc__inner').removeClass('nc__inner--result').addClass('nc__inner--accessories');
+        } else {
+          $('.nc__inner').removeClass('nc__inner--accessories');
+        }
 
         return false;
       }
@@ -239,6 +259,15 @@ $(".nc-c-list__arrow").click(function () {
         //смена таба
         $(".nc__tabs-link").removeClass("is-active");
         $(".nc__tabs-item").eq(slide - 1).find(".nc__tabs-link").addClass("is-active");
+
+        //смена классов разделов (конфиг/аксессуары/итого)
+        $('.nc__inner-top').removeClass('is-active');
+        $('.nc__inner-top[data-section="'+ $(".nc__tabs-item").eq(slide - 1).find(".nc__tabs-link").attr('data-section') +'"]').addClass('is-active');
+
+        //смена фона
+        if($(".nc__tabs-item").eq(slide - 1).find(".nc__tabs-link").attr('data-section') != 2) {
+          $('.nc__inner').removeClass('nc__inner--result').removeClass('nc__inner--accessories');
+        }
 
         return false;
       }
@@ -305,6 +334,9 @@ $(".js-config-edit").click(function () {
   //переключаем кнопки в футере
   $('.footer__inner').removeClass('is-active');
   $('.footer__inner--main').addClass('is-active');
+
+  //смена фона
+  $('.nc__inner').removeClass('nc__inner--result').removeClass('nc__inner--accessories');
 
   return false;
 });
