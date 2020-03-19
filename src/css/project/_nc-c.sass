@@ -67,9 +67,35 @@
     height: auto
     justify-content: center
     min-height: 70px
+    overflow: hidden
     position: relative
     padding-left: 5px
     padding-right: 5px
+    transition: background-color 0.2s linear
+    z-index: 2
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+      transition: opacity 0.1s linear
+
+    &:before
+      width: 160px
+      height: 120px
+      background: radial-gradient(circle at center, #FFF 0%, transparent 60%)
+      opacity: 0
+      mix-blend-mode: screen
+      transform: translate(calc( var(--px) * 1px ), calc( var(--py) * 1px )) translate(-50%, -50%)
+
+    &:hover
+      //background-color: rgba(56,56,56,0.9)
+
+      &::before
+        opacity: 0.2
 
     @media(min-width: 1600px)
       padding-left: 10px
@@ -131,7 +157,7 @@
     display: none
 
     &.is-open
-      background-color: #191919
+      background-color: #000
       bottom: 98px
       display: block
       height: auto

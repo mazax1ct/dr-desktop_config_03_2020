@@ -109,13 +109,13 @@ $(".js-nc-c-block").click(function () {
   $(".js-nc-c-block").removeClass("is-open");
   el.addClass("is-open"); //открываем текущий
 
-  $(".nc-c__list").stop(true, true).animate({ //скрываем список
+  $(".nc-c__list").stop(true).animate({ //скрываем список
     opacity: 0
-  }, 100, function() {
+  }, 200, function() {
     $(".nc-c__list").removeClass("is-open"); //удаляем класс после скрытия
-    el.next(".nc-c__list").addClass("is-open").stop(true, true).animate({ //добавляем класс открытия и показываем список
+    el.next(".nc-c__list").addClass("is-open").stop(true).animate({ //добавляем класс открытия и показываем список
       opacity: 1
-    }, 100);
+    }, 200);
   });
 
   el.parent(".nc-c").addClass("is-open"); //вешаем класс открытия на родителя
@@ -141,13 +141,13 @@ $(".js-nc-c2-block").click(function () {
   $(".js-nc-c2-block").removeClass("is-open");
   el.addClass("is-open");
 
-  $(".nc-c2__list").stop(true, true).animate({
+  $(".nc-c2__list").stop(true).animate({
     opacity: 0
-  }, 100, function() {
+  }, 200, function() {
     $(".nc-c2__list").removeClass("is-open");
-    el.next(".nc-c2__list").addClass("is-open").stop(true, true).animate({
+    el.next(".nc-c2__list").addClass("is-open").stop(true).animate({
       opacity: 1
-    }, 100);
+    }, 200);
   });
 
   el.parent(".nc-c2").addClass("is-open");
@@ -389,3 +389,13 @@ $(document).ready(function () {
     });
   }
 });
+
+Array.from(
+  document.querySelectorAll('.nc-c__block'),
+  function(el) {
+    el.addEventListener('mousemove',function(e){
+      var rect = el.getBoundingClientRect()
+      el.style.setProperty('--px', e.clientX - rect.left);
+      el.style.setProperty('--py', e.clientY - rect.top);
+    });
+  });
