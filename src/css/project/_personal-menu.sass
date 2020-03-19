@@ -10,6 +10,9 @@
   width: 100%
   z-index: 1
 
+  @media(min-height: 900px)
+    padding-top: 80px
+
   &.is-open
     background-color: rgba(0,0,0,0.3)
     display: block
@@ -18,7 +21,7 @@
   &__list
     min-height: 100%
     margin-left: auto
-    max-width: 320px
+    max-width: 400px
     position: relative
 
     &::before
@@ -26,7 +29,7 @@
       bottom: 0
       content: ''
       left: auto
-      max-width: 320px
+      max-width: 400px
       position: absolute
       right: 0
       top: 0

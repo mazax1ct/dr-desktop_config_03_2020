@@ -26,6 +26,7 @@
       pointer-events: none
 
   &__inner
+    align-items: center
     background-image: url('../images/bg/config_bg.png')
     background-position: 50% 0
     background-size: cover
@@ -44,8 +45,10 @@
     display: none
     flex-grow: 1
     height: calc(100% - 172px)
+    max-width: 1920px
     padding-left: 75px
     padding-right: 75px
+    width: 100%
 
     &.is-active
       display: flex
@@ -64,7 +67,14 @@
     overflow-y: auto
     width: 50%
 
-    &--accessory_picture,
+    &--accessory_picture
+      padding-top: 30px
+      padding-right: 75px
+      padding-left: 75px
+
+      @media(min-width: 1600px)
+        padding-top: 60px
+
     &--result_picture,
     &--result_info
       padding-top: 60px
@@ -74,9 +84,12 @@
     &--accessory_info
       font-size: 16px
       height: calc(100% - 30px)
-      padding-top: 60px
+      padding-top: 30px
       padding-right: 75px
       padding-left: 75px
+
+      @media(min-width: 1600px)
+        padding-top: 60px
 
       h1,
       h2,
@@ -95,9 +108,19 @@
     background-position: 50% 50%
     background-repeat: no-repeat
     background-size: contain
+    width: 100%
+
+  &__accessory-picture
+    height: calc(100% - 30px)
+    margin-bottom: 30px
+
+    @media(min-width: 1600px)
+      height: calc(100% - 60px)
+      margin-bottom: 60px
+
+  &__result-picture
     height: calc(100% - 60px)
     margin-bottom: 60px
-    width: 100%
 
   &__picture-block
     display: flex
@@ -125,6 +148,9 @@
     overflow-x: auto
     text-transform: uppercase
 
+    @media(min-height: 900px)
+      font-size: 15px
+
     &--small
       justify-content: flex-end
 
@@ -145,6 +171,9 @@
     text-decoration: none
     white-space: nowrap
 
+    @media(min-height: 900px)
+      min-height: 55px
+
     &.is-active,
     &:hover
       border-top-color: $main-color
@@ -157,19 +186,27 @@
     &.is-active
       display: block
 
+    .pbar-block:nth-child(9),
+    .pbar-block:nth-child(10)
+      display: none
+
+      @media(min-height: 1000px)
+        display: flex
+
   &__inner-bottom
+    width: 100%
+
     &.is-disabled
       display: none
 
   &__list-block
     align-items: center
+    border-top: 1px solid rgba(#fff, 0.05)
     display: flex
     justify-content: center
     height: 130px
     min-width: 100%
     order: 3
-    padding-left: 75px
-    padding-right: 75px
     position: relative
     width: 100%
     z-index: 4
@@ -178,12 +215,10 @@
       display: flex
 
   &__tabs
-    border-bottom: 1px solid rgba(#fff, 0.05)
     height: 42px
-    margin-left: -75px
-    margin-right: -75px
-    padding-left: 75px
-    padding-right: 75px
+    margin-left: auto
+    margin-right: auto
+    max-width: 1920px
 
   &__tabs-list
     display: flex
@@ -194,6 +229,9 @@
     margin: 0
     padding: 0 75px
     text-transform: uppercase
+
+    @media(min-height: 900px)
+      font-size: 15px
 
   &__tabs-link
     border-bottom: 3px solid transparent

@@ -35,6 +35,14 @@
   @media(min-height: 850px)
     max-width: 486px
 
+  @media(min-height: 900px)
+    max-width: 534px !important
+    margin-left: auto
+    margin-right: auto
+
+  @media(min-height: 1000px)
+    max-width: 650px !important
+
   &.slick-initialized
     display: block
 
@@ -64,6 +72,9 @@
   padding-bottom: 24px
   width: 80px
 
+  @media(min-height: 900px)
+    width: 110px
+
   &.slick-initialized
     display: block
 
@@ -76,17 +87,29 @@
     transition: opacity 0.3s
     width: 80px
 
+    @media(min-height: 900px)
+      height: 120px
+      width: 110px
+
     &.slick-current
       opacity: 1
 
   &__img
     background-color: rgba(#fff, 0.1)
 
+    img
+      display: block
+      max-width: initial
+      width: 100%
+
   .slick-arrow
     height: 12px
     transform: none
     width: 80px
     z-index: 1
+
+    @media(min-height: 900px)
+      width: 110px
 
   .slick-arrow__icon
     fill: rgba(#fff, 0.3)
