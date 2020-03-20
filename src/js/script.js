@@ -13,6 +13,11 @@ function ncClose() {
   //закрытие поповера с информацией
   $(".nci-info").removeClass("is-active");
   $(".nci-button").removeClass("is-active");
+
+  $(".header").removeClass("blur");
+  $(".nc__inner-top").removeClass("blur");
+  $(".nc__tabs").removeClass("blur");
+  $(".footer").removeClass("blur");
 }
 
 //закрытие попапа блока компонентов тип 2
@@ -127,6 +132,11 @@ $(".js-nc-c-block").click(function () {
     $(".nc").removeClass("is-open");
     $("body").removeClass("overflow");
   }
+
+  $(".header").addClass("blur");
+  $(".nc__inner-top").addClass("blur");
+  $(".nc__tabs").addClass("blur");
+  $(".footer").addClass("blur");
 });
 
 //закрытие списка компонентов
@@ -269,11 +279,13 @@ $(".nc-c-list__arrow").click(function () {
           $('.nc__inner').removeClass('nc__inner--result').removeClass('nc__inner--accessories');
         }
 
-        return false;
-      }
+        console.log(slide);
 
-      if(slide - 1 == 0) {
-        $(".nc-c-list__arrow--prev").prop("disabled", true);
+        if(slide == 1) {
+          $(".nc-c-list__arrow--prev").prop("disabled", true);
+          return false;
+        }
+
         return false;
       }
     }
@@ -390,8 +402,9 @@ $(document).ready(function () {
   }
 });
 
+//фонарик
 Array.from(
-  document.querySelectorAll('.nc-c__block'),
+  document.querySelectorAll('.js-fancy-light'),
   function(el) {
     el.addEventListener('mousemove',function(e){
       var rect = el.getBoundingClientRect()
