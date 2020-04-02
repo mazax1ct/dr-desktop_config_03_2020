@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>DIGITAL RAZOR</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  //= template/compare/style.html
+</head>
+
+<body class="compare-page">
+  //= template/compare/sprite.html
+
+  //= template/compare/header.html
+
+  <div class="compare">
+    <div class="compare__inner">
+      <div class="compare__left">
+        <div class="compare__switch">
+          <label class="switch" for="switch">
+            <input id="switch" class="switch__input" type="checkbox">
+            <span class="switch__checkbox"></span>
+            Только различающиеся параметры
+          </label>
+        </div>
+        <div class="compare__left-inner">
+          <div class="compare-table compare-table--3_items">
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--empty"></div>
+              <div class="compare-table__cell compare-table__cell--image">
+                <button class="compare-table__delete" type="button" title="Убрать из сравнения"><svg class="compare-table__delete-svg" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+                <img src="images/content/img_48.png" alt="alt">
+                <span class="compare-table__color red"></span>
+              </div>
+              <div class="compare-table__cell compare-table__cell--image">
+                <button class="compare-table__delete" type="button" title="Убрать из сравнения"><svg class="compare-table__delete-svg" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+                <img src="images/content/img_48.png" alt="alt">
+                <span class="compare-table__color white"></span>
+              </div>
+              <div class="compare-table__cell compare-table__cell--image">
+                <button class="compare-table__delete" type="button" title="Убрать из сравнения"><svg class="compare-table__delete-svg" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+                <img src="images/content/img_48.png" alt="alt">
+                <span class="compare-table__color blue"></span>
+              </div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">ID конфигурации:</div>
+              <div class="compare-table__cell compare-table__cell--desc"><a href="#">№908501</a></div>
+              <div class="compare-table__cell compare-table__cell--desc"><a href="#">№908501</a></div>
+              <div class="compare-table__cell compare-table__cell--desc"><a href="#">№908501</a></div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Цена:</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--price">162 500 руб.</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--price">162 500 руб.</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--price">162 500 руб.</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Процессор:</div>
+              <div class="compare-table__cell compare-table__cell--desc">8-ядерный Intel Core i7-9700F 3.00 GHz</div>
+              <div class="compare-table__cell compare-table__cell--desc">8-ядерный Intel Core i7-9700F 3.00 GHz</div>
+              <div class="compare-table__cell compare-table__cell--desc">8-ядерный Intel Core i7-9700F 3.00 GHz</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Кулер:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Cooler Master MasterLiquid ML120R RGB</div>
+              <div class="compare-table__cell compare-table__cell--desc">Cooler Master MasterLiquid ML120R RGB</div>
+              <div class="compare-table__cell compare-table__cell--desc">Cooler Master MasterLiquid ML120R RGB</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption compare-table__cell--marked">Системная плата:</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">Материнская плата Z390</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">Материнская плата Z390</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">Материнская плата Z390</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption compare-table__cell--marked">Оперативная память:</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">16GB (2x8Gb) DDR4 3000Mhz - x1</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">16GB (2x8Gb) DDR4 3000Mhz - x1</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">16GB (2x8Gb) DDR4 3000Mhz - x1</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Видеокарта:</div>
+              <div class="compare-table__cell compare-table__cell--desc">SSD 480GB - x1</div>
+              <div class="compare-table__cell compare-table__cell--desc">SSD 480GB - x1</div>
+              <div class="compare-table__cell compare-table__cell--desc">SSD 480GB - x1</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">SSD накопитель:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Жесткий диск 2TB - x1</div>
+              <div class="compare-table__cell compare-table__cell--desc">Жесткий диск 2TB - x1</div>
+              <div class="compare-table__cell compare-table__cell--desc">Жесткий диск 2TB - x1</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">HDD накопитель:</div>
+              <div class="compare-table__cell compare-table__cell--desc">PHANTEKS Enthoo Evolv TG RGB mATX</div>
+              <div class="compare-table__cell compare-table__cell--desc">PHANTEKS Enthoo Evolv TG RGB mATX</div>
+              <div class="compare-table__cell compare-table__cell--desc">PHANTEKS Enthoo Evolv TG RGB mATX</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption compare-table__cell--marked">Корпус:</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">750W Сертификат Bronze</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">750W Сертификат Bronze</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">750W Сертификат Bronze</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Кабель:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Кабель не нужен</div>
+              <div class="compare-table__cell compare-table__cell--desc">Кабель не нужен</div>
+              <div class="compare-table__cell compare-table__cell--desc">Кабель не нужен</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Сроки сборки:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Сборка и настройка ПК за 5-7 рабочих дней</div>
+              <div class="compare-table__cell compare-table__cell--desc">Сборка и настройка ПК за 5-7 рабочих дней</div>
+              <div class="compare-table__cell compare-table__cell--desc">Сборка и настройка ПК за 5-7 рабочих дней</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Разгон видеокарты:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без разгона GPU</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без разгона GPU</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без разгона GPU</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Доставка:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Бесплатная доставка по России</div>
+              <div class="compare-table__cell compare-table__cell--desc">Бесплатная доставка по России</div>
+              <div class="compare-table__cell compare-table__cell--desc">Бесплатная доставка по России</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Плата захвата:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без платы видеозахвата</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без платы видеозахвата</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без платы видеозахвата</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Комплексный разгон:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без разгона CPU</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без разгона CPU</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без разгона CPU</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Тестирование:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Стандартный стресс-тест 8 часов</div>
+              <div class="compare-table__cell compare-table__cell--desc">Стандартный стресс-тест 8 часов</div>
+              <div class="compare-table__cell compare-table__cell--desc">Стандартный стресс-тест 8 часов</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Гарантия:</div>
+              <div class="compare-table__cell compare-table__cell--desc">36 месяцев</div>
+              <div class="compare-table__cell compare-table__cell--desc">36 месяцев</div>
+              <div class="compare-table__cell compare-table__cell--desc">36 месяцев</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Дополнительная упаковка:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Деревянный ящик DigitalRazor</div>
+              <div class="compare-table__cell compare-table__cell--desc">Деревянный ящик DigitalRazor</div>
+              <div class="compare-table__cell compare-table__cell--desc">Деревянный ящик DigitalRazor</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption compare-table__cell--marked">Доставка:</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">100 рублей</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">100 рублей</div>
+              <div class="compare-table__cell compare-table__cell--desc compare-table__cell--marked">100 рублей</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Пенопакет:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Металлизированная наклейка</div>
+              <div class="compare-table__cell compare-table__cell--desc">Металлизированная наклейка</div>
+              <div class="compare-table__cell compare-table__cell--desc">Металлизированная наклейка</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Коврик:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Коврик DigitalRazor</div>
+              <div class="compare-table__cell compare-table__cell--desc">Коврик DigitalRazor</div>
+              <div class="compare-table__cell compare-table__cell--desc">Коврик DigitalRazor</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Подсветка:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без подсветки</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без подсветки</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без подсветки</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Цветная оплетка кабеля:</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без оплетки</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без оплетки</div>
+              <div class="compare-table__cell compare-table__cell--desc">Без оплетки</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--caption">Шильды на корпус (DigitalRazor):</div>
+              <div class="compare-table__cell compare-table__cell--desc">Пенопакет</div>
+              <div class="compare-table__cell compare-table__cell--desc">Пенопакет</div>
+              <div class="compare-table__cell compare-table__cell--desc">Пенопакет</div>
+            </div>
+            <div class="compare-table__row">
+              <div class="compare-table__cell compare-table__cell--empty"></div>
+              <div class="compare-table__cell compare-table__cell--buttons">
+                <a class="compare-table__button button button--red" href="#">Купить</a>
+                <a class="compare-table__button compare-table__button--edit button" href="#">Изменить</a>
+                <button class="compare-table__button compare-table__button--save button" type="button"><svg aria-hidden="true"><use xlink:href="#save"/></svg> сохранить pdf</button>
+              </div>
+              <div class="compare-table__cell compare-table__cell--buttons">
+                <a class="compare-table__button button button--red" href="#">Купить</a>
+                <a class="compare-table__button compare-table__button--edit button" href="#">Изменить</a>
+                <button class="compare-table__button compare-table__button--save button" type="button"><svg aria-hidden="true"><use xlink:href="#save"/></svg> сохранить pdf</button>
+              </div>
+              <div class="compare-table__cell compare-table__cell--buttons">
+                <a class="compare-table__button button button--red" href="#">Купить</a>
+                <a class="compare-table__button compare-table__button--edit button" href="#">Изменить</a>
+                <button class="compare-table__button compare-table__button--save button" type="button"><svg aria-hidden="true"><use xlink:href="#save"/></svg> сохранить pdf</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="js-float compare__float">
+          <div class="compare__float-container">
+            <div class="compare__float-inner">
+              <div class="compare-table compare-table--3_items">
+                <div class="compare-table__row">
+                  <div class="compare-table__cell compare-table__cell--empty"></div>
+                  <div class="compare-table__cell compare-table__cell--image">
+                    <div class="short-config">
+                      <div class="short-config__image"><img src="images/content/img_49.png" alt="alt"></div>
+                      <div class="short-config__info">
+                        <a class="short-config__link" href="#">№908501</a>
+                        <div class="short-config__color red"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="compare-table__cell compare-table__cell--image">
+                    <div class="short-config">
+                      <div class="short-config__image"><img src="images/content/img_49.png" alt="alt"></div>
+                      <div class="short-config__info">
+                        <a class="short-config__link" href="#">№908501</a>
+                        <div class="short-config__color white"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="compare-table__cell compare-table__cell--image">
+                    <div class="short-config">
+                      <div class="short-config__image"><img src="images/content/img_49.png" alt="alt"></div>
+                      <div class="short-config__info">
+                        <a class="short-config__link" href="#">№908501</a>
+                        <div class="short-config__color blue"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="compare__right">
+        <div class="compare__performance-tabs">
+          <ul class="compare__performance-tabs-list compare__performance-tabs-list--big">
+            <li class="compare__performance-tabs-item"><a class="compare__performance-tabs-link is-active" data-target="games" href="#">Игры</a></li>
+            <li class="compare__performance-tabs-item"><a class="compare__performance-tabs-link" data-target="content" href="#">Создание контента</a></li>
+          </ul>
+          <div class="compare__performance-tabs-resolution">
+            <ul class="compare__performance-tabs-list compare__performance-tabs-list--small">
+              <li class="compare__performance-tabs-item"><a class="compare__performance-tabs-link is-active" href="#">1080P</a></li>
+              <li class="compare__performance-tabs-item"><a class="compare__performance-tabs-link" href="#">2K</a></li>
+              <li class="compare__performance-tabs-item"><a class="compare__performance-tabs-link" href="#">4K</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="compare__performance-bars">
+          <div class="compare__performance-bars-tab is-active" data-target="games">
+            <div class="perf-bars">
+              <div class="perf-bars__title-block">
+                <p class="perf-bars__title">
+                  <span class="perf-bars__title-image"><img src="images/content/img_13.png" alt=""></span>
+                  Fortnite - 1080P
+                </p>
+                <p class="perf-bars__note">больше лучше</p>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar red" style="width: 80%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar white" style="width: 67%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar blue" style="width: 48%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+            </div>
+            <div class="perf-bars">
+              <div class="perf-bars__title-block">
+                <p class="perf-bars__title">
+                  <span class="perf-bars__title-image"><img src="images/content/img_14.png" alt=""></span>
+                  PUBG - 1080P
+                </p>
+                <p class="perf-bars__note">больше лучше</p>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar red" style="width: 80%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar white" style="width: 67%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar blue" style="width: 48%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+            </div>
+            <div class="perf-bars">
+              <div class="perf-bars__title-block">
+                <p class="perf-bars__title">
+                  <span class="perf-bars__title-image"><img src="images/content/img_15.png" alt=""></span>
+                  Metro Exodus - 1080P
+                </p>
+                <p class="perf-bars__note">больше лучше</p>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar red" style="width: 80%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar white" style="width: 67%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar blue" style="width: 48%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+            </div>
+            <div class="perf-bars">
+              <div class="perf-bars__title-block">
+                <p class="perf-bars__title">
+                  <span class="perf-bars__title-image"><img src="images/content/img_16.png" alt=""></span>
+                  Control - 1080P
+                </p>
+                <p class="perf-bars__note">больше лучше</p>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar red" style="width: 80%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar white" style="width: 67%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar blue" style="width: 48%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+            </div>
+            <div class="perf-bars">
+              <div class="perf-bars__title-block">
+                <p class="perf-bars__title">
+                  <span class="perf-bars__title-image"><img src="images/content/img_17.png" alt=""></span>
+                  BorderLands 3 - 1080P
+                </p>
+                <p class="perf-bars__note">больше лучше</p>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar red" style="width: 80%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar white" style="width: 67%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+              <div class="perf-bar">
+                <div id="plus" class="perf-bar__bar blue" style="width: 48%;"></div>
+                <div id="dplus" class="perf-bar__delta" style="width: 30%;">+5 sec</div>
+                <div class="perf-bar__value">
+                  <span>43</span> FPS
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="compare__performance-bars-tab" data-target="content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= template/compare/scripts.html
+
+</body>
+
+</html>
