@@ -8,7 +8,7 @@
   font-size: 12px
   font-weight: 500
   height: 30px
-  margin-top: 3px
+  margin-bottom: 3px
   position: relative
 
   @media(min-height: 700px)
@@ -17,19 +17,24 @@
   @media(min-height: 740px)
     font-size: 16px
     height: 38px
-    margin-top: 6px
+    margin-bottom: 6px
 
   @media(min-height: 850px)
     font-size: 16px
     height: 42px
-    margin-top: 10px
+    margin-bottom: 10px
 
   @media(min-height: 900px)
     font-size: 18px !important
     height: 48px !important
 
-  &:first-child
-    margin-top: 0
+  @media(min-height: 1200px)
+    font-size: 20px !important
+    height: 60px !important
+
+  @media(min-height: 1800px)
+    font-size: 30px !important
+    height: 100px !important
 
   &__image
     align-items: center
@@ -53,7 +58,9 @@
   &__title
     display: flex
     justify-content: space-between
+    margin-right: 30px
     position: relative
+    white-space: nowrap
     z-index: 3
 
   &__bar
@@ -94,7 +101,11 @@
   &__value
     line-height: 1.15
     position: relative
+    white-space: nowrap
     z-index: 3
 
     @media(min-height: 700px)
       font-size: 14px
+
+    @media(min-height: 1800px)
+      font-size: 24px
