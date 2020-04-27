@@ -31,8 +31,7 @@
     .nc-item__inner
       padding-right: 38px
 
-  &:nth-last-child(1),
-  &:nth-last-child(2)
+  &.middle
     .nci-info
       top: 50%
       transform: translateY(-50%)
@@ -42,16 +41,36 @@
         top: 50%
         transform: translateY(-50%)
 
-  &:nth-last-child(3),
-  &:nth-last-child(4),
-  &:nth-last-child(5),
-  &:nth-last-child(6),
-  &:nth-last-child(7),
-  &:nth-last-child(8)
+  &.bottom
     .nci-info
-      top: 0
+      bottom: 0
+      top: auto
 
       &::after
+        bottom: 5px
+        top: auto
+
+  //&:nth-last-child(1),
+  //&:nth-last-child(2)
+    //.nci-info
+      top: 50%
+      transform: translateY(-50%)
+
+      //&::after
+        bottom: auto
+        top: 50%
+        transform: translateY(-50%)
+
+  //&:nth-last-child(3),
+  //&:nth-last-child(4),
+  //&:nth-last-child(5),
+  //&:nth-last-child(6),
+  //&:nth-last-child(7),
+  //&:nth-last-child(8)
+    //.nci-info
+      top: 0
+
+      //&::after
         top: 30px
 
 .nci-button
@@ -92,8 +111,7 @@
 
   &::after
     left: -18px
-    top: auto
-    bottom: 20px
+    top: 54px
     border: solid transparent
     content: ''
     height: 0

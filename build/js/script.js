@@ -121,6 +121,13 @@ $(".js-nc-c-block").click(function () {
     el.next(".nc-c__list").addClass("is-open").stop(true).animate({ //добавляем класс открытия и показываем список
       opacity: 1
     }, 200);
+    el.next(".nc-c__list").find('div.nci-holder:visible').addClass('visible'); //ищем видимые элементы списка и вещаем им классы
+    $('.nc-c__list-block').each(function( index ) {
+      $(this).find('.visible').eq(1).addClass('middle');
+      $(this).find('.visible').eq(2).addClass('middle');
+      $(this).find('.visible').last().addClass('bottom');
+    });
+    //$('.nc-c__list-block .visible').last().addClass('bottom');
   });
 
   el.parent(".nc-c").addClass("is-open"); //вешаем класс открытия на родителя
