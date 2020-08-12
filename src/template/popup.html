@@ -145,3 +145,40 @@
     <a class="popup__button button button--red" href="#">Купить в рассрочку</a>
   </div>
 </div>
+
+<div id="popup_7" class="popup popup--graphs_options">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+  <p class="popup__title">Укажите данные каких тесты для Вас в приоритете</p>
+  <form class="graphs-options-form" method="post" action="">
+    <div class="graphs-options">
+      <div class="graphs-options__col">
+        <label class="checkbox-label" for="graph_1">
+          <input id="graph_1" class="checkbox-label__input" type="checkbox" name="graph">
+          <span class="checkbox-label__icon"></span>
+          Создание контента
+        </label>
+        <label class="checkbox-label" for="graph_2">
+          <input id="graph_2" class="checkbox-label__input" type="checkbox" name="graph">
+          <span class="checkbox-label__icon"></span>
+          Рендеринг
+        </label>
+      </div>
+      <div class="graphs-options__col">
+        <label class="checkbox-label" for="graph_3">
+          <input id="graph_3" class="checkbox-label__input" type="checkbox" name="graph">
+          <span class="checkbox-label__icon"></span>
+          Машинное обучение и AI
+        </label>
+        <label class="checkbox-label" for="graph_4">
+          <input id="graph_4" class="checkbox-label__input" type="checkbox" name="graph">
+          <span class="checkbox-label__icon"></span>
+          Работа с 3D
+        </label>
+      </div>
+    </div>
+    <button class="button button--red" type="button">Сохранить</button>
+  </form>
+  <p class="graphs-options-note">Мы отобразим в конфигураторе актуальные тесты, чтобы Вам было проще ориентироваться.</p>
+  <p class="graphs-options-note">Если Вы еще не зарегистрированы на сайте, рекомендуем это сделать, так как выбор будет записан в профиль и сможете всегда видеть только актуальную информацию.</p>
+  <p><a class="button button--transparent" href="#">Зарегистрироваться</a></p>
+</div>

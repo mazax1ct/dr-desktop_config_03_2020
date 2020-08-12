@@ -6,6 +6,17 @@
   padding: 55px 70px
   width: 100%
 
+  &--graphs_options
+    max-width: 630px
+
+    .popup__title
+      text-transform: none
+
+    .checkbox-label
+      color: #fff
+      font-size: 15px
+      line-height: 20px
+
   &__close
     align-items: center
     background: none
@@ -120,8 +131,6 @@
     display: block
     margin-bottom: 10px
 
-  &__form-textarea
-
   &__form-buttons
     margin-top: 20px
 
@@ -173,3 +182,28 @@
   min-height: 24px
   padding-right: 30px
   vertical-align: top
+
+.graphs-options
+  margin-bottom: 15px
+
+  @media(min-width: 600px)
+    display: flex
+    margin-left: -25px
+    margin-right: -25px
+
+  &__col
+    margin-bottom: 15px
+
+    @media(min-width: 600px)
+      padding-left: 25px
+      padding-right: 25px
+      width: 50%
+.graphs-options-form
+  margin-bottom: 30px
+  
+.graphs-options-note
+  color: #666
+  font-size: 14px
+  line-height: 20px
+  margin-top: 15px
+  margin-bottom: 15px
