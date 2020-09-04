@@ -226,21 +226,20 @@
   &__performance-pbars
     position: relative
 
-    &::before,
-    &::after
-      background-color: rgba(#fff, 0.1)
-      content: ''
-      height: 100%
-      margin-left: 26px
-      position: absolute
-      top: 0
-      width: 1px
-      z-index: 3
+  &__performance-pbar
+    background-color: rgba(#fff, 0.1)
+    content: ''
+    height: 100%
+    margin-left: 26px
+    position: absolute
+    top: 0
+    width: 1px
+    z-index: 3
 
-    &::before
+    //&::before
       left: calc((100%/3)*1)
 
-    &::after
+    //&::after
       left: calc((100%/3)*2)
 
   &__inner-bottom
