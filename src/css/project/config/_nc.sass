@@ -215,14 +215,6 @@
     span
       width: 41px
 
-      &:nth-child(2)
-        text-align: center
-        transform: translateX(-40%)
-
-      &:nth-child(3)
-        text-align: center
-        transform: translateX(50%)
-
   &__performance-pbars
     position: relative
 
@@ -236,11 +228,15 @@
     width: 1px
     z-index: 3
 
-    //&::before
-      left: calc((100%/3)*1)
+    color: rgba(#fff, 0.4)
+    font-size: 12px
+    white-space: nowrap
 
-    //&::after
-      left: calc((100%/3)*2)
+    span
+      top: -26px
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
 
   &__inner-bottom
     width: 100%
