@@ -628,12 +628,40 @@
                   <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link" href="#">2K</a></li>
                 </ul>
               </div>
-              <a class="change-games" href="javascript:void(0)" data-src="#popup_7" data-fancybox="graps_options">
+              <!--<a class="change-games" href="javascript:void(0)" data-src="#popup_7" data-fancybox="graps_options">
                 <svg class="change-games__icon" aria-hidden="true">
                   <use xlink:href="#pen"/>
                 </svg>
                 Настроить
-              </a>
+              </a>-->
+              <div class="options">
+                <button class="options__toggler" type="button">НАСТРОИТЬ ГРАФИКИ</button>
+                <div class="options__dropdown">
+                  <p class="options__title">Разрешение</p>
+                  <div class="options__buttons">
+                    <button class="options__button is-active" type="button">4K</button>
+                    <button class="options__button" type="button">2K</button>
+                    <button class="options__button" type="button">Full HD</button>
+                  </div>
+                  <p class="options__title">Настройки графики</p>
+                  <div class="options__buttons">
+                    <button class="options__button is-active" type="button">Max</button>
+                    <button class="options__button" type="button">High</button>
+                    <button class="options__button" type="button">Standart</button>
+                  </div>
+                  <p class="options__title">Показать игры 60+ fps</p>
+                  <label class="options__checkbox">
+                    <input type="checkbox">
+                    <span class="options__checkbox-icon"></span>
+                  </label>
+                  <p class="options__title">Показать новинки</p>
+                  <label class="options__checkbox">
+                    <input type="checkbox">
+                    <span class="options__checkbox-icon"></span>
+                  </label>
+                  <button class="options__button options__apply" type="button">Изменить игры</button>
+                </div>
+              </div>
             </div>
             <div class="nc__performance-bars">
               <div class="nc__performance-bars-tab is-active" data-target="games">

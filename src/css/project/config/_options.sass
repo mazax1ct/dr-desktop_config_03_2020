@@ -1,0 +1,115 @@
+.options
+  align-self: center
+  position: relative
+  width: 170px
+  z-index: 5
+
+  @media(min-width: 1440px)
+    width: 260px
+
+  &__toggler
+    border: none
+    background-color: rgba(#fff, 0.2)
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 9L0.0717953 -3.51391e-07L13.9282 8.59975e-07L7 9Z' fill='white'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: calc(100% - 4px) 50%
+    background-size: 10px 6px
+    color: #fff
+    cursor: pointer
+    font-family: $secondary-font
+    font-size: 12px
+    height: 34px
+    padding: 0 10px
+    text-align: left
+    text-transform: uppercase
+    width: 100%
+
+    @media(min-width: 1440px)
+      background-position: calc(100% - 8px) 50%
+      background-size: 14px 9px
+      font-size: 16px
+      text-align: center
+
+    &.is-active
+      background-color: $main-color
+
+  &__dropdown
+    background-color: $main-color
+    color: #fff
+    display: none
+    left: auto
+    position: absolute
+    padding: 8px 39px 24px
+    right: 0
+    top: 100%
+    width: 260px
+    z-index: 1
+
+  &__title
+    font-size: 14px
+    font-weight: 700
+    margin-bottom: 8px
+
+  &__buttons
+    display: flex
+    margin-bottom: 16px
+
+  &__button
+    border: none
+    background-color: rgba(#fff, 0.5)
+    color: #0C1117
+    cursor: pointer
+    font-family: $secondary-font
+    font-size: 12px
+    height: 32px
+    padding: 0 12px
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s
+
+    &:hover
+      background-color: rgba(#fff, 0.75)
+
+    &.is-active
+      background-color: #fff
+      box-shadow: 0 2px 2px 0 rgba(#000, 0.25)
+
+    &:not(:last-child)
+      margin-right: 6px
+
+  &__checkbox
+    background-color: #fff
+    border-radius: 50px
+    display: flex
+    cursor: pointer
+    height: 25px
+    margin-bottom: 8px
+    position: relative
+    width: 50px
+
+    input
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:checked + .options__checkbox-icon
+        margin-left: auto
+
+  &__checkbox-icon
+    background-color: #0C1117
+    border-radius: 50%
+    box-shadow: 0 2px 2px 0 rgba(#000, 0.25)
+    display: block
+    height: 25px
+    width: 25px
+
+  &__apply
+    box-shadow: 0 2px 2px 0 rgba(#000, 0.25)
+    background-color: #fff
+    margin-top: 16px
+    width: 100%
+
+    &:hover
+      background-color: #0C1117
+      color: #fff
+      box-shadow: 0 2px 2px 0 rgba(#000, 0.25)

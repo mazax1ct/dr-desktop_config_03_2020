@@ -419,3 +419,10 @@ Array.from(
       el.style.setProperty('--py', e.clientY - rect.top);
     });
   });
+
+//настройки графиков
+$(document).on('click', '.options__toggler', function () {
+  $(this).toggleClass('is-active');
+  $('.options__dropdown').toggle();
+  return false;
+});
