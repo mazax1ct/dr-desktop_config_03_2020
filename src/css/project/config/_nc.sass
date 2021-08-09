@@ -44,7 +44,7 @@
   &__inner-top
     display: none
     flex-grow: 1
-    height: calc(100% - 172px)
+    height: calc(100% - 190px)
     max-width: 1920px
     padding-left: 75px
     padding-right: 75px
@@ -310,3 +310,137 @@
     &:hover
       color: #fff
       text-decoration: none
+
+  &__tags
+    background-color: #0F0F0F
+    border-top: 1px solid rgba(#fff, 0.1)
+    border-bottom: 1px solid rgba(#fff, 0.1)
+    height: 48px
+    overflow: hidden
+
+    @media(min-height: 900px)
+      height: 64px
+
+    @media(min-height: 1000px)
+      margin-bottom: 16px
+
+  &__tags-list
+    align-items: center
+    cursor: grab
+    display: flex
+    overflow-x: auto
+    padding-top: 8px
+    padding-bottom: 8px
+    padding-left: 75px
+    padding-right: 75px
+    user-select: none
+
+    @media(min-height: 900px)
+      padding-top: 16px
+      padding-bottom: 16px
+
+    &.active
+      cursor: grabbing
+
+  &__tag
+    align-items: center
+    color: #fff
+    display: flex
+    font-size: 16px
+    line-height: 20px
+    height: 32px
+    margin-right: 28px
+    padding: 6px 8px
+    user-select: none
+    white-space: nowrap
+
+    svg
+      fill: #fff
+      filter: drop-shadow(0 1px 1px rgba(#000, 0.25))
+      height: 12px
+      width: 12px
+
+    &--type_1
+      background-color: rgba(#FFD9A8, 0.3)
+
+    &--type_2
+      background-color: rgba(#3B81EA, 0.3)
+      color: #53D6FE
+
+      svg
+        fill: #53D6FE
+
+    &--type_3
+      background-color: rgba(#D43C38, 0.3)
+      color: #F36D6A
+
+      svg
+        fill: #F36D6A
+
+    &--type_4
+      background-color: rgba(#FFFFFF, 0.3)
+
+    &--type_5
+      background-color: rgba(#9B5DE5, 0.3)
+      color: #D4B0FF
+
+      svg
+        fill: #D4B0FF
+
+    &--type_6
+      background-color: rgba(#E06C2E, 0.3)
+      color: #FFB086
+
+      svg
+        fill: #FFB086
+
+    &--type_7
+      background-color: #76B900
+      text-shadow: 0 1px 1px rgba(#000, 0.25)
+
+    &--type_8
+      background-color: #F26522
+      text-shadow: 0 1px 1px rgba(#000, 0.25)
+
+    &--type_9
+      background-color: #0071C5
+      text-shadow: 0 1px 1px rgba(#000, 0.25)
+
+    &--type_10
+      background: linear-gradient(90deg, #FF0000 0%, #FF3131 100%)
+
+    &--type_11
+      background: linear-gradient(90.96deg, #FF0029 1.14%, #FF2A4C 100%)
+
+    &--type_12
+      background: linear-gradient(90deg, #F3AD00 0%, #FFCF58 100%)
+      color: #000
+
+      svg
+        fill: #000
+
+    &--type_13
+      background: linear-gradient(90deg, #FF6400 0%, #FF8C41 100%)
+
+    &--type_14
+      background: linear-gradient(90deg, #FF6400 0%, #FF9A59 100%)
+
+  &__tag-delete
+    align-items: center
+    border: none
+    border-radius: 2px
+    background-color: transparent
+    cursor: pointer
+    display: flex
+    height: 24px
+    justify-content: center
+    margin-left: 12px
+    padding: 0
+    transition: background-color 0.3s
+    width: 24px
+
+    &:hover
+      background-color: rgba(#fff, 0.2)
+
+    &:active
+      background-color: rgba(#fff, 0.4)
